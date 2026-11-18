@@ -1,0 +1,2138 @@
+<!DOCTYPE html>
+<html lang="es" class="dark scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <title>EL DIOS QUE SIRVE: El que madruga Dios lo ayuda y Dios ayuda a quien se ayuda by Rubén Sbarsky</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts Inter & Space Grotesk -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;700;800&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Space Grotesk', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            bg: '#050914',
+                            card: '#0c1326',
+                            border: '#1e293b',
+                            cyan: '#00f2fe',
+                            blue: '#4facfe',
+                            purple: '#a855f7',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Optimización de rendimiento y estética para Samsung Galaxy A02s (720x1600px) */
+        * {
+            -webkit-tap-highlight-color: transparent;
+            box-sizing: border-box;
+        }
+        body {
+            background-color: #050914;
+            color: #e2e8f0;
+            font-family: 'Inter', sans-serif;
+            overflow-x: hidden;
+            background-image: 
+                radial-gradient(circle at 10% 10%, rgba(0, 242, 254, 0.07) 0%, transparent 40%),
+                radial-gradient(circle at 90% 80%, rgba(168, 85, 247, 0.07) 0%, transparent 40%);
+            background-attachment: fixed;
+        }
+        /* Ocultar barra de scroll en carrusel de pestañas pero mantener scroll táctil fluido */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        /* Estilo de pestaña activa */
+        .tab-btn {
+            transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .tab-btn.active {
+            background: linear-gradient(135deg, rgba(0, 242, 254, 0.18) 0%, rgba(168, 85, 247, 0.22) 100%);
+            border-color: #00f2fe;
+            color: #ffffff;
+            box-shadow: 0 0 15px rgba(0, 242, 254, 0.25);
+            font-weight: 700;
+        }
+        /* Tarjetas de Agencia Digital Premium */
+        .agency-card {
+            background: rgba(12, 19, 38, 0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(56, 189, 248, 0.16);
+            box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.6);
+        }
+        .agency-card-highlight {
+            background: linear-gradient(145deg, rgba(15, 23, 42, 0.92), rgba(12, 19, 38, 0.96));
+            border: 1px solid rgba(0, 242, 254, 0.35);
+            box-shadow: 0 10px 35px -10px rgba(0, 242, 254, 0.15);
+        }
+        /* Botones flotantes arrastrables */
+        .draggable-fab {
+            touch-action: none;
+            user-select: none;
+            -webkit-user-select: none;
+            cursor: grab;
+            transition: transform 0.15s ease, box-shadow 0.2s ease;
+        }
+        .draggable-fab:active {
+            cursor: grabbing;
+            transform: scale(1.08);
+        }
+        /* Animaciones suaves de entrada de pestaña */
+        @keyframes fadeInTab {
+            from { opacity: 0; transform: translateY(8px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .tab-pane {
+            display: none;
+            animation: fadeInTab 0.3s ease-out forwards;
+        }
+        .tab-pane.active {
+            display: block;
+        }
+        /* Tipografía optimizada para lectura móvil */
+        .prose-custom p {
+            margin-bottom: 1.15rem;
+            line-height: 1.75;
+            color: #cbd5e1;
+            font-size: 1.02rem;
+        }
+        .prose-custom h2 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 700;
+            color: #f8fafc;
+            margin-top: 1.75rem;
+            margin-bottom: 0.85rem;
+            line-height: 1.3;
+        }
+        .prose-custom h3 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 600;
+            color: #38bdf8;
+            margin-top: 1.4rem;
+            margin-bottom: 0.6rem;
+        }
+        .glow-text {
+            background: linear-gradient(90deg, #00f2fe 0%, #4facfe 45%, #c084fc 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col selection:bg-cyan-500 selection:text-slate-950">
+
+    <!-- DEFINICIÓN DE RECURSO SVG: LOGO OFICIAL "IA TUTORIALES" (Escudo Neón + Cerebro + Circuito + Play) -->
+    <svg width="0" height="0" class="hidden">
+        <defs>
+            <linearGradient id="neonCyanPurple" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#00f2fe" />
+                <stop offset="50%" stop-color="#4facfe" />
+                <stop offset="100%" stop-color="#a855f7" />
+            </linearGradient>
+            <linearGradient id="shieldBg" x1="0%" y1="0%" x2="0%" y2="100%">
+                <stop offset="0%" stop-color="#08142c" />
+                <stop offset="100%" stop-color="#030712" />
+            </linearGradient>
+            <filter id="neonGlow" x="-20%" y="-20%" width="140%" height="140%">
+                <feGaussianBlur stdDeviation="2.2" result="blur" />
+                <feComposite in="SourceGraphic" in2="blur" operator="over" />
+            </filter>
+        </defs>
+        <symbol id="logo-ia-tutoriales" viewBox="0 0 120 135">
+            <!-- Escudo Exterior con Brillo Neón -->
+            <path d="M60 6 C88 6 108 16 108 45 C108 78 84 99 60 110 C36 99 12 78 12 45 C12 16 32 6 60 6 Z" 
+                  fill="url(#shieldBg)" stroke="url(#neonCyanPurple)" stroke-width="4" filter="url(#neonGlow)"/>
+            <!-- Escudo Interior fino -->
+            <path d="M60 11 C84 11 102 20 102 45 C102 74 80 93 60 103 C40 93 18 74 18 45 C18 20 36 11 60 11 Z" 
+                  fill="none" stroke="#00f2fe" stroke-opacity="0.35" stroke-width="1.2"/>
+            
+            <!-- Mitad Izquierda: Hemisferio Cerebral Orgánico (Cian) -->
+            <g stroke="#00f2fe" stroke-width="2.6" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M57 24 C45 22 36 29 36 39 C31 41 29 48 33 54 C28 59 31 68 38 71 C37 78 44 85 55 83" />
+                <path d="M44 33 C49 35 53 33 56 30" />
+                <path d="M36 47 C43 46 47 50 51 47" />
+                <path d="M38 62 C44 60 49 64 53 60" />
+                <path d="M45 74 C50 73 53 76 56 72" />
+                <line x1="57" y1="22" x2="57" y2="85" stroke-opacity="0.6" stroke-width="1.8"/>
+            </g>
+
+            <!-- Mitad Derecha: Circuito de Inteligencia Artificial (Cian a Púrpura) -->
+            <g stroke="url(#neonCyanPurple)" stroke-width="2.2" fill="none" stroke-linecap="round">
+                <line x1="63" y1="22" x2="63" y2="85" stroke-opacity="0.6" stroke-width="1.8"/>
+                <path d="M63 29 L72 29 L78 23" />
+                <path d="M63 39 L77 39 L85 33" />
+                <path d="M63 49 L82 49 L89 55" />
+                <path d="M63 61 L77 61 L84 68" />
+                <path d="M63 72 L73 72 L79 80" />
+                <!-- Nodos de red neuronal exterior -->
+                <path d="M78 23 L89 38 L85 33 M89 55 L93 43 L85 33 M84 68 L92 60 L89 55" stroke-width="1" stroke-opacity="0.5"/>
+            </g>
+            <!-- Nodos brillantes del circuito -->
+            <g fill="#00f2fe">
+                <circle cx="78" cy="23" r="2.8" />
+                <circle cx="85" cy="33" r="3" />
+                <circle cx="93" cy="43" r="2" />
+            </g>
+            <g fill="#c084fc">
+                <circle cx="89" cy="55" r="3" />
+                <circle cx="84" cy="68" r="2.8" />
+                <circle cx="79" cy="80" r="2.6" />
+                <circle cx="92" cy="60" r="2" />
+            </g>
+
+            <!-- Botón Play Central -->
+            <circle cx="60" cy="53" r="13.5" fill="#061024" stroke="url(#neonCyanPurple)" stroke-width="2.8" filter="url(#neonGlow)"/>
+            <polygon points="56,46 68,53 56,60" fill="#00f2fe" />
+
+            <!-- Texto "IA" y "TUTORIALES" al pie del escudo -->
+            <text x="60" y="118" text-anchor="middle" font-family="'Space Grotesk', sans-serif" font-weight="800" font-size="22" fill="url(#neonCyanPurple)" letter-spacing="1.5">IA</text>
+            <text x="60" y="131" text-anchor="middle" font-family="'Inter', sans-serif" font-weight="800" font-size="10.5" fill="#e0f2fe" letter-spacing="2.2">TUTORIALES</text>
+        </symbol>
+    </svg>
+
+    <!-- BARRA SUPERIOR FIJA PERMANENTE (Con Logo SVG, Botón ÍNDICE Sándwich y Barra Horizontal de Pestañas) -->
+    <header class="sticky top-0 z-40 w-full bg-[#050914]/95 backdrop-blur-xl border-b border-cyan-500/25 shadow-2xl">
+        <!-- Fila 1: Identidad visual + Botón Índice Menú Sándwich -->
+        <div class="max-w-5xl mx-auto px-3 py-2 flex items-center justify-between gap-2">
+            <button onclick="selectTab(0)" class="flex items-center gap-2.5 text-left group focus:outline-none" title="Ir a Inicio">
+                <div class="w-10 h-10 rounded-xl bg-slate-900/90 border border-cyan-400/40 flex items-center justify-center p-1 shadow-md shadow-cyan-500/10 group-hover:border-cyan-300 transition">
+                    <svg class="w-8 h-8"><use href="#logo-ia-tutoriales"></use></svg>
+                </div>
+                <div class="leading-tight">
+                    <span class="block text-[10px] font-bold uppercase tracking-widest text-cyan-400">Tutorial Interactivo</span>
+                    <span class="block text-sm sm:text-base font-display font-bold text-white truncate max-w-[175px] sm:max-w-xs">El Dios que Sirve</span>
+                </div>
+            </button>
+
+            <div class="flex items-center gap-2">
+                <!-- Indicador de progreso de pestaña -->
+                <span id="tab-counterBadge" class="hidden sm:inline-block text-xs font-mono px-2.5 py-1 rounded-lg bg-slate-800/90 text-cyan-300 border border-slate-700">
+                    1 / 19
+                </span>
+                <!-- Botón ÍNDICE (Menú Sándwich) -->
+                <button id="open-drawer-btn" onclick="toggleDrawer(true)" 
+                        class="flex items-center gap-2 px-3.5 py-2 rounded-xl bg-gradient-to-r from-cyan-500/20 to-purple-500/25 hover:from-cyan-500/30 hover:to-purple-500/35 border border-cyan-400/50 text-white font-display font-bold text-xs sm:text-sm shadow-lg shadow-cyan-500/10 active:scale-95 transition">
+                    <svg class="w-5 h-5 text-cyan-300" fill="none" stroke="currentColor" stroke-width="2.4" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                    <span>ÍNDICE</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Fila 2: Barra de pestañas permanente con desplazamiento táctil horizontal y auto-centrado -->
+        <div class="border-t border-slate-800/80 bg-[#070d1f]/90">
+            <nav id="top-tabs-bar" aria-label="Secciones del tutorial" 
+                 class="max-w-5xl mx-auto px-2.5 py-2 flex items-center gap-2 overflow-x-auto no-scrollbar scroll-smooth">
+                <!-- Pestañas inyectadas dinámicamente por JS con nombres temáticos reales -->
+            </nav>
+        </div>
+    </header>
+
+    <!-- MENÚ SÁNDWICH (DRAWER VERTICAL COMPLETO CON LAS 19 PESTAÑAS) -->
+    <div id="drawer-overlay" onclick="toggleDrawer(false)" 
+         class="fixed inset-0 z-50 bg-black/75 backdrop-blur-sm hidden opacity-0 transition-opacity duration-300"></div>
+    
+    <aside id="drawer-menu" aria-label="Índice completo"
+           class="fixed top-0 right-0 z-50 h-full w-[88vw] max-w-sm bg-[#080f24] border-l border-cyan-500/30 shadow-2xl transform translate-x-full transition-transform duration-300 ease-in-out flex flex-col">
+        <!-- Cabecera del Menú Sándwich -->
+        <div class="p-4 border-b border-slate-800 flex items-center justify-between bg-slate-900/60">
+            <div class="flex items-center gap-2.5">
+                <svg class="w-8 h-8"><use href="#logo-ia-tutoriales"></use></svg>
+                <div>
+                    <h2 class="font-display font-bold text-white text-base">Índice del Tutorial</h2>
+                    <p class="text-xs text-cyan-400">19 Secciones · Acceso Directo</p>
+                </div>
+            </div>
+            <button onclick="toggleDrawer(false)" class="p-2 rounded-xl bg-slate-800 text-slate-300 hover:text-white border border-slate-700">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>
+                </svg>
+            </button>
+        </div>
+        <!-- Lista Vertical Completa -->
+        <div id="drawer-links-container" class="flex-1 overflow-y-auto p-3 space-y-1.5">
+            <!-- Se llena por JS -->
+        </div>
+        <!-- Pie del Drawer -->
+        <div class="p-3.5 border-t border-slate-800 bg-slate-950/80 text-center text-xs text-slate-400">
+            Autor: <strong class="text-cyan-300">Rubén Sbarsky</strong> · Edición Digital Premium
+        </div>
+    </aside>
+
+    <!-- CONTENEDOR PRINCIPAL DE CONTENIDO (100% DEL ARCHIVO ADJUNTO) -->
+    <main id="main-content-area" class="flex-1 w-full max-w-4xl mx-auto px-3.5 sm:px-6 pt-5 pb-28">
+
+        <!-- ==========================================
+             PESTAÑA 0: INICIO (Con Logo SVG a la izquierda del título y "by Rubén Sbarsky" solo aquí)
+             ========================================== -->
+        <section class="tab-pane active" data-tab-index="0" data-tab-title="Inicio">
+            <!-- Hero Principal -->
+            <div class="agency-card-highlight rounded-3xl p-5 sm:p-8 mb-6 relative overflow-hidden">
+                <div class="absolute -top-24 -right-24 w-56 h-56 bg-cyan-500/10 rounded-full blur-3xl pointer-events-none"></div>
+                <div class="absolute -bottom-24 -left-24 w-56 h-56 bg-purple-500/10 rounded-full blur-3xl pointer-events-none"></div>
+
+                <div class="flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-6 mb-5">
+                    <!-- Logo adjunto en tamaño pequeño e integrado en SVG a la izquierda del título principal -->
+                    <div class="w-16 h-16 sm:w-20 sm:h-20 rounded-2xl bg-[#050b1a] border-2 border-cyan-400/50 flex-shrink-0 flex items-center justify-center p-1.5 shadow-lg shadow-cyan-500/20">
+                        <svg class="w-full h-full"><use href="#logo-ia-tutoriales"></use></svg>
+                    </div>
+                    <div>
+                        <span class="inline-block text-xs font-bold uppercase tracking-widest px-3 py-1 rounded-full bg-cyan-500/15 text-cyan-300 border border-cyan-400/30 mb-2">
+                            Pensamiento Crítico & Epistemología
+                        </span>
+                        <h1 class="font-display text-2xl sm:text-3xl md:text-4xl font-extrabold text-white leading-tight">
+                            EL DIOS QUE SIRVE: El que madruga Dios lo ayuda y Dios ayuda a quien se ayuda <span class="glow-text block sm:inline mt-1 sm:mt-0">by Rubén Sbarsky</span>
+                        </h1>
+                    </div>
+                </div>
+
+                <p class="text-base sm:text-lg font-medium text-cyan-200/95 border-l-4 border-cyan-400 pl-4 py-1 bg-slate-900/50 rounded-r-xl">
+                    <strong>Un tutorial de pensamiento crítico sobre la intervención divina, la autonomía y la responsabilidad humana</strong>
+                </p>
+            </div>
+
+            <!-- Introducción íntegra -->
+            <div class="agency-card rounded-3xl p-5 sm:p-7 mb-6 prose-custom">
+                <h2 class="text-xl sm:text-2xl flex items-center gap-2.5 !mt-0">
+                    <span class="w-2.5 h-7 rounded-full bg-gradient-to-b from-cyan-400 to-purple-500 inline-block"></span>
+                    Introducción
+                </h2>
+
+                <p>Hay una pregunta sencilla que puede abrir una discusión enorme: cuando una persona tiene un problema, ¿qué espera exactamente que haga Dios?</p>
+
+                <p>La pregunta no presupone que Dios exista ni que no exista. Tampoco presupone que todas las religiones entiendan lo divino de la misma manera. Se refiere a una expectativa concreta: que una divinidad escuche una petición, intervenga en los acontecimientos, proteja a alguien, consiga un empleo, evite una enfermedad, resuelva una dificultad económica o haga justicia cuando los seres humanos no pueden conseguirla.</p>
+
+                <p>Esa expectativa merece ser examinada. Puede convivir con una vida activa y responsable; también puede, en ciertas circunstancias, reemplazar la deliberación y la acción. La diferencia no está necesariamente en rezar o no rezar, sino en qué lugar ocupa esa práctica dentro de la conducta real.</p>
+
+                <p>Este tutorial defiende una idea limitada, pero importante: <strong class="text-cyan-300">la esperanza puede acompañar a la acción, pero no debería utilizarse como sustituto de ella</strong>. No pretende resolver la cuestión metafísica de la existencia de Dios. Pretende investigar qué ocurre cuando se espera una intervención sobrenatural para resolver problemas que también requieren conocimiento, decisiones, cooperación y trabajo humano.</p>
+
+                <p>La frase que inspira el título es deliberadamente provocadora:</p>
+
+                <blockquote class="my-5 p-5 rounded-2xl bg-gradient-to-r from-cyan-950/60 to-purple-950/50 border border-cyan-400/40 text-lg sm:text-xl font-display font-bold text-white shadow-inner">
+                    «Dios está para crear universos, no para cambiarte los pañales cuando eres mayor de 18 años».
+                </blockquote>
+
+                <p>Es una metáfora, no una descripción literal de Dios. Su blanco es la dependencia infantilizada: la expectativa de que una autoridad superior se haga cargo de cada dificultad y nos libre de pensar, decidir o asumir consecuencias.</p>
+
+                <p class="!mb-0">El autor se define como agnóstico. Por tanto, el punto de partida no es «sé que Dios no existe», sino «no afirmo saber lo que no puedo demostrar». Esa posición permite cuestionar las afirmaciones sobre intervenciones divinas sin fingir que se ha resuelto todo el misterio de la realidad.</p>
+            </div>
+
+            <!-- Tabla de contenidos interactiva -->
+            <div class="agency-card rounded-3xl p-5 sm:p-7">
+                <h2 class="font-display text-xl sm:text-2xl font-bold text-white mb-4 flex items-center gap-2.5">
+                    <svg class="w-6 h-6 text-cyan-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/>
+                    </svg>
+                    Tabla de contenidos
+                </h2>
+                <p class="text-sm text-slate-400 mb-4">Toca cualquier apartado para acceder directamente a su pestaña correspondiente:</p>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
+                    <button onclick="selectTab(1)" class="text-left p-3.5 rounded-2xl bg-slate-900/80 hover:bg-slate-800 border border-slate-800 hover:border-cyan-500/40 transition flex items-center gap-3 group">
+                        <span class="w-8 h-8 rounded-xl bg-cyan-500/15 border border-cyan-500/30 text-cyan-300 font-display font-bold text-xs flex items-center justify-center flex-shrink-0 group-hover:bg-cyan-500 group-hover:text-slate-950 transition">01</span>
+                        <span class="text-sm font-medium text-slate-200 group-hover:text-white">El título como provocación filosófica</span>
+                    </button>
+                    <button onclick="selectTab(2)" class="text-left p-3.5 rounded-2xl bg-slate-900/80 hover:bg-slate-800 border border-slate-800 hover:border-cyan-500/40 transition flex items-center gap-3 group">
+                        <span class="w-8 h-8 rounded-xl bg-cyan-500/15 border border-cyan-500/30 text-cyan-300 font-display font-bold text-xs flex items-center justify-center flex-shrink-0 group-hover:bg-cyan-500 group-hover:text-slate-950 transition">02</span>
+                        <span class="text-sm font-medium text-slate-200 group-hover:text-white">Las dos frases bajo el microscopio</span>
+                    </button>
+                    <button onclick="selectTab(3)" class="text-left p-3.5 rounded-2xl bg-slate-900/80 hover:bg-slate-800 border border-slate-800 hover:border-cyan-500/40 transition flex items-center gap-3 group">
+                        <span class="w-8 h-8 rounded-xl bg-cyan-500/15 border border-cyan-500/30 text-cyan-300 font-display font-bold text-xs flex items-center justify-center flex-shrink-0 group-hover:bg-cyan-500 group-hover:text-slate-950 transition">03</span>
+                        <span class="text-sm font-medium text-slate-200 group-hover:text-white">El Dios proveedor: una divinidad convertida en servicio de atención al cliente</span>
+                    </button>
+                    <button onclick="selectTab(4)" class="text-left p-3.5 rounded-2xl bg-slate-900/80 hover:bg-slate-800 border border-slate-800 hover:border-cyan-500/40 transition flex items-center gap-3 group">
+                        <span class="w-8 h-8 rounded-xl bg-cyan-500/15 border border-cyan-500/30 text-cyan-300 font-display font-bold text-xs flex items-center justify-center flex-shrink-0 group-hover:bg-cyan-500 group-hover:text-slate-950 transition">04</span>
+                        <span class="text-sm font-medium text-slate-200 group-hover:text-white">La psicología de pedir ayuda sobrenatural</span>
+                    </button>
+                    <button onclick="selectTab(5)" class="text-left p-3.5 rounded-2xl bg-slate-900/80 hover:bg-slate-800 border border-slate-800 hover:border-cyan-500/40 transition flex items-center gap-3 group">
+                        <span class="w-8 h-8 rounded-xl bg-cyan-500/15 border border-cyan-500/30 text-cyan-300 font-display font-bold text-xs flex items-center justify-center flex-shrink-0 group-hover:bg-cyan-500 group-hover:text-slate-950 transition">05</span>
+                        <span class="text-sm font-medium text-slate-200 group-hover:text-white">La parálisis mental: cuando la esperanza sustituye a la acción</span>
+                    </button>
+                    <button onclick="selectTab(6)" class="text-left p-3.5 rounded-2xl bg-slate-900/80 hover:bg-slate-800 border border-slate-800 hover:border-cyan-500/40 transition flex items-center gap-3 group">
+                        <span class="w-8 h-8 rounded-xl bg-cyan-500/15 border border-cyan-500/30 text-cyan-300 font-display font-bold text-xs flex items-center justify-center flex-shrink-0 group-hover:bg-cyan-500 group-hover:text-slate-950 transition">06</span>
+                        <span class="text-sm font-medium text-slate-200 group-hover:text-white">La trampa de las explicaciones que nunca pueden perder</span>
+                    </button>
+                    <button onclick="selectTab(7)" class="text-left p-3.5 rounded-2xl bg-slate-900/80 hover:bg-slate-800 border border-slate-800 hover:border-cyan-500/40 transition flex items-center gap-3 group">
+                        <span class="w-8 h-8 rounded-xl bg-cyan-500/15 border border-cyan-500/30 text-cyan-300 font-display font-bold text-xs flex items-center justify-center flex-shrink-0 group-hover:bg-cyan-500 group-hover:text-slate-950 transition">07</span>
+                        <span class="text-sm font-medium text-slate-200 group-hover:text-white">El problema del sufrimiento y la justicia</span>
+                    </button>
+                    <button onclick="selectTab(8)" class="text-left p-3.5 rounded-2xl bg-slate-900/80 hover:bg-slate-800 border border-slate-800 hover:border-cyan-500/40 transition flex items-center gap-3 group">
+                        <span class="w-8 h-8 rounded-xl bg-cyan-500/15 border border-cyan-500/30 text-cyan-300 font-display font-bold text-xs flex items-center justify-center flex-shrink-0 group-hover:bg-cyan-500 group-hover:text-slate-950 transition">08</span>
+                        <span class="text-sm font-medium text-slate-200 group-hover:text-white">Oración, causalidad y evidencia</span>
+                    </button>
+                    <button onclick="selectTab(9)" class="text-left p-3.5 rounded-2xl bg-slate-900/80 hover:bg-slate-800 border border-slate-800 hover:border-cyan-500/40 transition flex items-center gap-3 group">
+                        <span class="w-8 h-8 rounded-xl bg-cyan-500/15 border border-cyan-500/30 text-cyan-300 font-display font-bold text-xs flex items-center justify-center flex-shrink-0 group-hover:bg-cyan-500 group-hover:text-slate-950 transition">09</span>
+                        <span class="text-sm font-medium text-slate-200 group-hover:text-white">Autonomía, responsabilidad y cooperación</span>
+                    </button>
+                    <button onclick="selectTab(10)" class="text-left p-3.5 rounded-2xl bg-slate-900/80 hover:bg-slate-800 border border-slate-800 hover:border-cyan-500/40 transition flex items-center gap-3 group">
+                        <span class="w-8 h-8 rounded-xl bg-cyan-500/15 border border-cyan-500/30 text-cyan-300 font-display font-bold text-xs flex items-center justify-center flex-shrink-0 group-hover:bg-cyan-500 group-hover:text-slate-950 transition">10</span>
+                        <span class="text-sm font-medium text-slate-200 group-hover:text-white">Los mejores argumentos a favor de la fe y sus límites</span>
+                    </button>
+                    <button onclick="selectTab(11)" class="text-left p-3.5 rounded-2xl bg-slate-900/80 hover:bg-slate-800 border border-slate-800 hover:border-cyan-500/40 transition flex items-center gap-3 group">
+                        <span class="w-8 h-8 rounded-xl bg-cyan-500/15 border border-cyan-500/30 text-cyan-300 font-display font-bold text-xs flex items-center justify-center flex-shrink-0 group-hover:bg-cyan-500 group-hover:text-slate-950 transition">11</span>
+                        <span class="text-sm font-medium text-slate-200 group-hover:text-white">El agnosticismo como disciplina intelectual</span>
+                    </button>
+                    <button onclick="selectTab(12)" class="text-left p-3.5 rounded-2xl bg-slate-900/80 hover:bg-slate-800 border border-slate-800 hover:border-cyan-500/40 transition flex items-center gap-3 group">
+                        <span class="w-8 h-8 rounded-xl bg-cyan-500/15 border border-cyan-500/30 text-cyan-300 font-display font-bold text-xs flex items-center justify-center flex-shrink-0 group-hover:bg-cyan-500 group-hover:text-slate-950 transition">12</span>
+                        <span class="text-sm font-medium text-slate-200 group-hover:text-white">Experimentos mentales y ejercicios de pensamiento</span>
+                    </button>
+                    <button onclick="selectTab(13)" class="text-left p-3.5 rounded-2xl bg-slate-900/80 hover:bg-slate-800 border border-slate-800 hover:border-cyan-500/40 transition flex items-center gap-3 group">
+                        <span class="w-8 h-8 rounded-xl bg-cyan-500/15 border border-cyan-500/30 text-cyan-300 font-display font-bold text-xs flex items-center justify-center flex-shrink-0 group-hover:bg-cyan-500 group-hover:text-slate-950 transition">13</span>
+                        <span class="text-sm font-medium text-slate-200 group-hover:text-white">Método práctico: de esperar milagros a construir posibilidades</span>
+                    </button>
+                    <button onclick="selectTab(14)" class="text-left p-3.5 rounded-2xl bg-slate-900/80 hover:bg-slate-800 border border-slate-800 hover:border-cyan-500/40 transition flex items-center gap-3 group">
+                        <span class="w-8 h-8 rounded-xl bg-cyan-500/15 border border-cyan-500/30 text-cyan-300 font-display font-bold text-xs flex items-center justify-center flex-shrink-0 group-hover:bg-cyan-500 group-hover:text-slate-950 transition">14</span>
+                        <span class="text-sm font-medium text-slate-200 group-hover:text-white">Conclusión: una vida adulta frente a la incertidumbre</span>
+                    </button>
+                    <button onclick="selectTab(15)" class="text-left p-3.5 rounded-2xl bg-slate-900/80 hover:bg-slate-800 border border-slate-800 hover:border-cyan-500/40 transition flex items-center gap-3 group">
+                        <span class="w-8 h-8 rounded-xl bg-cyan-500/15 border border-cyan-500/30 text-cyan-300 font-display font-bold text-xs flex items-center justify-center flex-shrink-0 group-hover:bg-cyan-500 group-hover:text-slate-950 transition">15</span>
+                        <span class="text-sm font-medium text-slate-200 group-hover:text-white">33 preguntas y respuestas</span>
+                    </button>
+                    <button onclick="selectTab(16)" class="text-left p-3.5 rounded-2xl bg-slate-900/80 hover:bg-slate-800 border border-slate-800 hover:border-cyan-500/40 transition flex items-center gap-3 group">
+                        <span class="w-8 h-8 rounded-xl bg-cyan-500/15 border border-cyan-500/30 text-cyan-300 font-display font-bold text-xs flex items-center justify-center flex-shrink-0 group-hover:bg-cyan-500 group-hover:text-slate-950 transition">16</span>
+                        <span class="text-sm font-medium text-slate-200 group-hover:text-white">Glosario</span>
+                    </button>
+                    <button onclick="selectTab(17)" class="text-left p-3.5 rounded-2xl bg-slate-900/80 hover:bg-slate-800 border border-slate-800 hover:border-cyan-500/40 transition flex items-center gap-3 group">
+                        <span class="w-8 h-8 rounded-xl bg-cyan-500/15 border border-cyan-500/30 text-cyan-300 font-display font-bold text-xs flex items-center justify-center flex-shrink-0 group-hover:bg-cyan-500 group-hover:text-slate-950 transition">17</span>
+                        <span class="text-sm font-medium text-slate-200 group-hover:text-white">Fuentes y referencias</span>
+                    </button>
+                    <button onclick="selectTab(18)" class="text-left p-3.5 rounded-2xl bg-slate-900/80 hover:bg-slate-800 border border-slate-800 hover:border-cyan-500/40 transition flex items-center gap-3 group">
+                        <span class="w-8 h-8 rounded-xl bg-purple-500/20 border border-purple-500/40 text-purple-300 font-display font-bold text-xs flex items-center justify-center flex-shrink-0 group-hover:bg-purple-500 group-hover:text-slate-950 transition">18</span>
+                        <span class="text-sm font-medium text-slate-200 group-hover:text-white">Créditos</span>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================
+             PESTAÑA 1: Provocación Filosófica
+             ========================================== -->
+        <section class="tab-pane" data-tab-index="1" data-tab-title="Provocación Filosófica">
+            <div class="agency-card rounded-3xl p-5 sm:p-8 prose-custom">
+                <span class="text-xs font-bold uppercase tracking-widest text-cyan-400">Reflexión Inicial</span>
+                <h1 class="font-display text-2xl sm:text-3xl font-extrabold text-white mt-1 mb-6">
+                    El título como provocación filosófica
+                </h1>
+
+                <h2 class="text-xl">1.1. ¿Quién está al servicio de quién?</h2>
+                <p>«El Dios que sirve» invierte una perspectiva tradicional. En muchas formas de religiosidad, el ser humano debe servir, obedecer, venerar o cumplir la voluntad divina. Sin embargo, en la práctica cotidiana también aparece otra relación: el ser humano pide y espera que Dios le sirva de protección, orientación, solución o garantía.</p>
+                <p>No es necesariamente una contradicción teológica. Una tradición puede enseñar la adoración y, al mismo tiempo, invitar a pedir ayuda. Pero sí aparece una tensión cuando la divinidad se convierte en una especie de proveedor personal al que se recurre para obtener resultados concretos.</p>
+                <p>La pregunta incómoda es esta: ¿buscamos a Dios por lo que creemos que es, o por lo que esperamos que haga por nosotros?</p>
+                <p>Una persona puede responder que ambas cosas. Otra puede entender la oración como entrega y no como negociación. Otra puede considerar que pedir ayuda es una relación legítima con lo sagrado. El tutorial no debe borrar esas diferencias. Examina, en particular, la versión instrumental de la fe: «si pido correctamente, algo ocurrirá a mi favor».</p>
+
+                <h2 class="text-xl">1.2. La metáfora de los pañales</h2>
+                <p>La imagen de los pañales apunta a una dependencia que debería disminuir con la madurez. Un niño necesita que otros decidan por él, lo alimenten, lo protejan y resuelvan problemas que todavía no puede comprender. Un adulto, en cambio, debe desarrollar capacidades para orientarse, aunque siga necesitando a otras personas.</p>
+                <p>Madurar no significa no pedir ayuda. Significa aprender a distinguir:</p>
+                <ul class="space-y-2 my-4 pl-5 list-disc text-slate-300">
+                    <li>Lo que puedo resolver directamente.</li>
+                    <li>Lo que puedo resolver con ayuda.</li>
+                    <li>Lo que exige la intervención de profesionales o instituciones.</li>
+                    <li>Lo que no depende de mí y debo aprender a soportar o afrontar.</li>
+                    <li>Lo que todavía no comprendo y necesito investigar.</li>
+                </ul>
+                <p>La metáfora critica la delegación total, no la cooperación. Un adulto que consulta a un médico no es menos autónomo; está utilizando conocimiento especializado. Quien pide apoyo a un amigo tampoco renuncia a su responsabilidad. La autonomía no es vivir aislado: es participar conscientemente en las decisiones que afectan a la propia vida.</p>
+
+                <h2 class="text-xl">1.3. Autonomía no es omnipotencia individual</h2>
+                <p>Hay una trampa en la crítica a la dependencia religiosa: sustituir «Dios lo resolverá» por «todo depende de mí». Ambas afirmaciones pueden ser falsas.</p>
+                <p>Una persona puede esforzarse y no encontrar empleo porque hay desempleo, discriminación, una crisis económica o una enfermedad. Puede planificar y sufrir un accidente. Puede hacer todo lo razonable y aun así perder. La vida no es una máquina que entrega resultados proporcionales al mérito.</p>
+                <p>La responsabilidad adulta consiste en actuar dentro de los límites reales, no en fingir que esos límites no existen. Tampoco consiste en culpar a quien sufre por no haber tenido suficiente voluntad, fe o disciplina.</p>
+
+                <div class="mt-6 p-4 sm:p-5 rounded-2xl bg-cyan-500/10 border border-cyan-400/40 text-cyan-100">
+                    <strong class="text-cyan-300">Idea clave:</strong> asumir responsabilidad significa hacerse cargo de la parte que nos corresponde; no significa atribuirnos el control de todo lo que sucede.
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================
+             PESTAÑA 2: Dos Frases al Microscopio
+             ========================================== -->
+        <section class="tab-pane" data-tab-index="2" data-tab-title="Dos Frases al Microscopio">
+            <div class="agency-card rounded-3xl p-5 sm:p-8 prose-custom">
+                <span class="text-xs font-bold uppercase tracking-widest text-cyan-400">Análisis de Refranes</span>
+                <h1 class="font-display text-2xl sm:text-3xl font-extrabold text-white mt-1 mb-4">
+                    Las dos frases bajo el microscopio
+                </h1>
+                <p>Los refranes condensan experiencia, valores y supuestos culturales. Pueden orientar, pero no son leyes científicas. Su brevedad los vuelve memorables y también puede esconder excepciones.</p>
+
+                <h2 class="text-xl">2.1. «El que madruga, Dios lo ayuda»</h2>
+                <p>La frase puede interpretarse de al menos tres maneras:</p>
+                <ol class="space-y-2 my-4 pl-5 list-decimal text-slate-300">
+                    <li><strong class="text-white">Religiosa:</strong> Dios favorece a quien se levanta temprano.</li>
+                    <li><strong class="text-white">Práctica:</strong> comenzar pronto permite aprovechar oportunidades.</li>
+                    <li><strong class="text-white">Motivacional:</strong> la iniciativa y la disciplina suelen ser mejores que la espera pasiva.</li>
+                </ol>
+                <p>La segunda y la tercera interpretación pueden tener sentido en determinados contextos sin necesidad de introducir una causa sobrenatural. Si una persona abre su negocio antes, puede atender a más clientes. Si estudia con tiempo, puede prepararse mejor. Si llega temprano a una entrevista, evita el riesgo de retrasarse.</p>
+                <p>Pero madrugar no causa automáticamente el éxito. Un trabajador que se levanta a las cuatro de la mañana puede sufrir una explotación laboral, enfermar o perder su empleo. Una persona que trabaja de noche puede ser competente y tener una vida productiva. El horario adecuado depende de la salud, el tipo de actividad, las responsabilidades y las condiciones de cada cual.</p>
+                <p>¿Qué sucede cuando alguien madruga y fracasa? ¿Dios no lo ayudó? ¿No madrugó lo suficiente? ¿La ayuda divina fue invisible? ¿O el refrán expresa una tendencia práctica, no una promesa?</p>
+                <p>Si una frase se utiliza para explicar cualquier resultado, pierde capacidad para orientar con precisión. La explicación más sobria es que la preparación y la iniciativa pueden aumentar oportunidades, pero no garantizan el resultado.</p>
+
+                <h2 class="text-xl">2.2. «Dios ayuda a quien se ayuda»</h2>
+                <p>Esta expresión contiene una tensión interesante. Si una persona ya se está ayudando, ¿qué trabajo causal adicional realiza Dios?</p>
+                <p>Hay varias lecturas posibles:</p>
+                <ul class="space-y-2 my-4 pl-5 list-disc text-slate-300">
+                    <li>Dios recompensa la iniciativa.</li>
+                    <li>La ayuda divina se manifiesta a través de la propia capacidad de actuar.</li>
+                    <li>La fe inspira a la persona a actuar.</li>
+                    <li>La frase es, en realidad, una recomendación de responsabilidad formulada en lenguaje religioso.</li>
+                </ul>
+                <p>Las tres primeras son interpretaciones religiosas posibles. La cuarta permite conservar el consejo práctico sin afirmar una intervención sobrenatural.</p>
+                <p>La pregunta de comprobación es difícil: ¿cómo distinguir un resultado producido por la preparación, las circunstancias y la cooperación de otro que además fue causado por Dios? Una persona creyente puede interpretar el resultado como providencial. Pero esa interpretación no equivale por sí sola a una prueba externa de causalidad sobrenatural.</p>
+                <p>Existe además un riesgo moral: convertir la frase en una acusación contra quien fracasa. «Si no saliste adelante, será que no te ayudaste bastante». Esa conclusión ignora la enfermedad, la pobreza, las responsabilidades de cuidado, las desigualdades y la mala suerte.</p>
+                <p>El esfuerzo importa, pero no es una garantía. Afirmar lo contrario es injusto con quienes hacen todo lo razonable y aun así no consiguen lo que necesitan.</p>
+
+                <h2 class="text-xl">2.3. Comparación</h2>
+                <div class="overflow-x-auto my-5 rounded-2xl border border-slate-700/80">
+                    <table class="w-full text-left border-collapse text-sm">
+                        <thead>
+                            <tr class="bg-slate-900 text-cyan-300 border-b border-slate-700">
+                                <th class="p-3.5 font-display font-bold">Aspecto</th>
+                                <th class="p-3.5 font-display font-bold">«El que madruga...»</th>
+                                <th class="p-3.5 font-display font-bold">«Dios ayuda a quien se ayuda»</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-slate-800 bg-slate-950/60 text-slate-200">
+                            <tr>
+                                <td class="p-3.5 font-semibold text-white">Consejo práctico</td>
+                                <td class="p-3.5">Aprovechar el tiempo</td>
+                                <td class="p-3.5">Tomar iniciativa</td>
+                            </tr>
+                            <tr>
+                                <td class="p-3.5 font-semibold text-white">Supuesto central</td>
+                                <td class="p-3.5">Empezar pronto favorece oportunidades</td>
+                                <td class="p-3.5">La acción propia es condición importante</td>
+                            </tr>
+                            <tr>
+                                <td class="p-3.5 font-semibold text-white">Riesgo</td>
+                                <td class="p-3.5">Confundir horario con mérito</td>
+                                <td class="p-3.5">Culpar al que no consigue resultados</td>
+                            </tr>
+                            <tr>
+                                <td class="p-3.5 font-semibold text-white">Pregunta crítica</td>
+                                <td class="p-3.5">¿Madrugar siempre ayuda?</td>
+                                <td class="p-3.5">¿Qué añade la intervención divina?</td>
+                            </tr>
+                            <tr>
+                                <td class="p-3.5 font-semibold text-white">Lectura prudente</td>
+                                <td class="p-3.5">Prepararse y actuar puede ayudar</td>
+                                <td class="p-3.5">No esperar pasivamente</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <p class="!mb-0">Ambos refranes pueden leerse como invitaciones a actuar. El problema aparece cuando se transforman en promesas universales o explicaciones sobrenaturales que no pueden contrastarse.</p>
+            </div>
+        </section>
+
+        <!-- ==========================================
+             PESTAÑA 3: El Dios Proveedor
+             ========================================== -->
+        <section class="tab-pane" data-tab-index="3" data-tab-title="El Dios Proveedor">
+            <div class="agency-card rounded-3xl p-5 sm:p-8 prose-custom">
+                <span class="text-xs font-bold uppercase tracking-widest text-cyan-400">Religiosidad Instrumental</span>
+                <h1 class="font-display text-2xl sm:text-3xl font-extrabold text-white mt-1 mb-4">
+                    El Dios proveedor: una divinidad convertida en servicio de atención al cliente
+                </h1>
+
+                <p>Imaginemos una línea de atención al cliente celestial. Llegan millones de solicitudes: que alguien consiga trabajo, que una operación salga bien, que una pareja regrese, que un equipo gane, que llueva en una región y que deje de llover en otra.</p>
+                <p>La analogía ilumina un aspecto: algunas personas imaginan una divinidad que recibe peticiones individuales y modifica los acontecimientos a favor de quien solicita ayuda. También deja de ser adecuada en un punto importante: las tradiciones religiosas más elaboradas no suelen describir a Dios como un empleado que tramita solicitudes ni como una máquina de conceder deseos.</p>
+                <p>La oración puede ser adoración, confesión, gratitud, meditación, petición, conversación simbólica o expresión de vulnerabilidad. Reducir toda oración a una reclamación sería una caricatura.</p>
+
+                <h2 class="text-xl">3.1. Peticiones incompatibles</h2>
+                <p>Dos personas pueden pedir resultados opuestos. Dos equipos rivales piden ganar el mismo partido. Dos agricultores desean condiciones meteorológicas diferentes. Dos candidatos piden obtener el mismo puesto. Una persona pide que una relación continúe y otra que termine.</p>
+                <p>No es imposible que una teología responda que Dios tiene razones superiores o que las peticiones deben entenderse de otra manera. Pero la situación muestra que la idea de «Dios me ayudará» no puede analizarse sin preguntar qué ocurre cuando los deseos humanos chocan.</p>
+                <p>Si todos los resultados favorables se atribuyen a una intervención divina, ¿cómo se explica el resultado de quien pidió lo contrario?</p>
+
+                <h2 class="text-xl">3.2. Omnipotencia, omnisciencia y bondad</h2>
+                <p>En ciertas concepciones teístas clásicas, Dios es:</p>
+                <ul class="space-y-2 my-4 pl-5 list-disc text-slate-300">
+                    <li><strong class="text-white">Omnipotente:</strong> posee poder ilimitado o máximo, según la formulación doctrinal.</li>
+                    <li><strong class="text-white">Omnisciente:</strong> conoce todo lo que puede ser conocido.</li>
+                    <li><strong class="text-white">Perfectamente bueno:</strong> no tiene defectos morales y quiere el bien.</li>
+                </ul>
+                <p>No todas las religiones ni todas las corrientes teológicas definen a Dios de esta manera. Algunas hablan de divinidad impersonal, realidad última, fuerzas sagradas o concepciones que no encajan con un agente personal que interviene en cada episodio.</p>
+                <p>Pero cuando se sostiene simultáneamente que Dios puede evitar un sufrimiento, sabe que ese sufrimiento ocurre y desea el bien, surge una pregunta filosófica poderosa: ¿por qué no lo evita?</p>
+                <p>La cuestión no demuestra por sí sola una conclusión definitiva. Sí obliga a explicar la relación entre poder, conocimiento, bondad y sufrimiento.</p>
+
+                <h2 class="text-xl">3.3. La petición como relación, no como transacción</h2>
+                <p>Una respuesta religiosa sólida puede decir que la oración no pretende controlar a Dios, sino transformar la relación de la persona con su vida. Puede ser una práctica de humildad, gratitud o aceptación.</p>
+                <p class="!mb-0">Esa interpretación es diferente de afirmar: «he pedido que ocurra X y, por tanto, X ocurrirá». Conviene no confundirlas. La primera puede tener un valor espiritual y psicológico para quien la practica. La segunda formula una expectativa sobre el mundo que, cuando se refiere a resultados observables, admite preguntas sobre evidencia y causalidad.</p>
+            </div>
+        </section>
+
+        <!-- ==========================================
+             PESTAÑA 4: Psicología Sobrenatural
+             ========================================== -->
+        <section class="tab-pane" data-tab-index="4" data-tab-title="Psicología Sobrenatural">
+            <div class="agency-card rounded-3xl p-5 sm:p-8 prose-custom">
+                <span class="text-xs font-bold uppercase tracking-widest text-cyan-400">Mecanismos Cognitivos</span>
+                <h1 class="font-display text-2xl sm:text-3xl font-extrabold text-white mt-1 mb-4">
+                    La psicología de pedir ayuda sobrenatural
+                </h1>
+
+                <p>La psicología no necesita declarar verdadera o falsa una creencia para estudiar por qué resulta atractiva, cómo influye en la conducta o qué consecuencias puede tener. Los mecanismos que siguen son posibilidades humanas generales. También aparecen en personas no religiosas, en la política, las inversiones, las supersticiones, las relaciones afectivas y las decisiones profesionales.</p>
+
+                <h2 class="text-xl">4.1. Necesidad de control ante la incertidumbre</h2>
+                <p>La incertidumbre resulta incómoda. No saber si tendremos empleo, si una persona querida se recuperará o si una decisión saldrá bien puede generar ansiedad. Una explicación que promete que alguien poderoso cuida de nosotros puede reducir esa sensación de desamparo.</p>
+                <p>Ejemplo: una persona espera el resultado de una biopsia. Rezar puede darle un ritual para atravesar los días. Eso no demuestra que la oración modifique el resultado médico; sí puede ayudarle a expresar miedo y sentirse acompañada.</p>
+
+                <h2 class="text-xl">4.2. Búsqueda de patrones y detección de intenciones</h2>
+                <p>El cerebro humano busca regularidades. Esa capacidad permite aprender, anticipar peligros y comprender el entorno. Pero también puede llevarnos a ver una intención detrás de acontecimientos que quizá no la tengan.</p>
+                <p>Ejemplo: alguien piensa en una persona y recibe una llamada suya minutos después. Puede vivirlo como una señal. Sin embargo, para evaluar la explicación habría que considerar cuántas veces piensa en esa persona sin recibir una llamada y cuántas coincidencias parecidas recuerda de otras personas.</p>
+
+                <h2 class="text-xl">4.3. Sesgo de confirmación</h2>
+                <p>El sesgo de confirmación consiste en buscar, recordar o interpretar información de una manera favorable a una creencia previa. Raymond S. Nickerson revisó este fenómeno en un artículo de 1998 publicado en <em>Review of General Psychology</em>.</p>
+                <p>Ejemplo: alguien recuerda las tres ocasiones en que pidió ayuda y algo salió bien, pero olvida las veinte ocasiones en que pidió lo mismo y no ocurrió nada especial. No necesariamente miente: la memoria selecciona y reconstruye.</p>
+                <p>La corrección no consiste en burlarse de la persona, sino en hacer una pregunta simétrica: «¿Qué ejemplos contarías como evidencia en contra de tu interpretación?».</p>
+
+                <h2 class="text-xl">4.4. Sesgo de selección y recuerdo selectivo</h2>
+                <p>El sesgo de selección aparece cuando observamos solo una parte de los casos y sacamos conclusiones como si esa parte representara el conjunto. El recuerdo selectivo hace que ciertos episodios emocionalmente intensos sean más accesibles que otros.</p>
+                <p>Ejemplo: una comunidad publica testimonios de curaciones inesperadas, pero no mantiene un registro equivalente de las peticiones que no tuvieron el resultado deseado. La colección de testimonios puede ser sincera y, aun así, no permitir estimar la frecuencia real del fenómeno.</p>
+
+                <h2 class="text-xl">4.5. Ilusión de control</h2>
+                <p>Es la tendencia a sobreestimar cuánto control tenemos sobre sucesos que dependen en gran medida del azar o de factores externos.</p>
+                <p>Ejemplo: una persona usa siempre una prenda determinada cuando juega a la lotería y atribuye a esa prenda el premio. La prenda puede tener valor emocional; no por ello controla el sorteo.</p>
+                <p>La ilusión de control puede aparecer también en formas no religiosas: rituales deportivos, números de la suerte o rutinas personales.</p>
+
+                <h2 class="text-xl">4.6. Pensamiento mágico</h2>
+                <p>El pensamiento mágico establece una relación causal entre acciones o pensamientos que no cuentan con un mecanismo demostrado. Por ejemplo: «si repito esta frase exactamente siete veces, evitaré que ocurra una desgracia».</p>
+                <p>No toda práctica simbólica es pensamiento mágico. Encender una vela puede representar recuerdo o duelo sin que la persona afirme que la llama modifica físicamente el mundo. La distinción está en la afirmación causal.</p>
+
+                <h2 class="text-xl">4.7. Atribución causal</h2>
+                <p>Atribuir causalidad significa explicar por qué ocurrió algo. El problema es que un resultado suele tener muchas causas: preparación, recursos, decisiones, ayuda ajena, condiciones sociales, azar y acontecimientos imprevistos.</p>
+                <p>Ejemplo: una persona consigue trabajo después de rezar. También había enviado treinta currículums, mejorado su entrevista y recibido una recomendación. Atribuir el empleo exclusivamente a Dios deja fuera factores observables. Atribuirlo exclusivamente al esfuerzo propio también podría ser una simplificación.</p>
+
+                <h2 class="text-xl">4.8. Razonamiento motivado</h2>
+                <p>El razonamiento motivado ocurre cuando nuestros deseos influyen en cómo evaluamos las pruebas. No siempre razonamos para averiguar qué es cierto; a veces razonamos para proteger algo que necesitamos creer.</p>
+                <p>Ejemplo: una persona necesita pensar que su enfermedad tiene un propósito. Puede interpretar cualquier información como confirmación de esa idea porque la alternativa le resulta insoportable. La necesidad emocional merece respeto, pero no convierte la interpretación en un hecho demostrado.</p>
+
+                <h2 class="text-xl">4.9. Disonancia cognitiva</h2>
+                <p>La disonancia cognitiva es la incomodidad que aparece cuando dos ideas o una idea y una conducta entran en conflicto. Para reducirla, podemos cambiar una creencia, modificar la conducta o reinterpretar lo sucedido.</p>
+                <p>Ejemplo: alguien cree que Dios protege a los justos, pero una persona buena sufre una desgracia. Puede abandonar esa creencia, matizarla o decir que existe un plan que no comprende. Algunas respuestas son filosóficamente elaboradas; otras pueden funcionar como protección automática frente al conflicto.</p>
+
+                <h2 class="text-xl">4.10. Necesidad de cierre cognitivo</h2>
+                <p>Es el deseo de alcanzar una respuesta clara y estable, en lugar de permanecer en la ambigüedad. Una explicación definitiva puede aliviar la incertidumbre, aunque no esté bien sustentada.</p>
+                <p>Ejemplo: «todo sucede por una razón» puede cerrar una conversación sobre una tragedia. Pero quizá lo más honesto sea reconocer que no sabemos por qué ocurrió.</p>
+
+                <h2 class="text-xl">4.11. Efecto placebo y expectativas</h2>
+                <p>Las expectativas pueden influir en cómo una persona experimenta síntomas, dolor, ansiedad o bienestar. El efecto placebo es un fenómeno estudiado en medicina: el contexto de atención, las expectativas y el significado atribuido a un tratamiento pueden producir cambios reales en la experiencia y, en ciertos contextos, en respuestas fisiológicas.</p>
+                <p>Esto no significa que la expectativa cure cualquier enfermedad, regenere tejidos dañados o sustituya tratamientos eficaces. Tampoco demuestra que una intervención sobrenatural haya ocurrido. Un cambio psicológico real no es automáticamente una prueba de una causa divina.</p>
+
+                <h2 class="text-xl">4.12. Sesgo retrospectivo</h2>
+                <p>Después de conocer un resultado, tendemos a pensar que era más previsible de lo que realmente era. «Yo sabía que iba a pasar» suele ser más fácil de decir después del acontecimiento.</p>
+                <p>Ejemplo: tras una recuperación, alguien recuerda que había tenido una sensación de esperanza y la interpreta como anuncio. Pero antes de conocer el resultado quizá tenía miedo y muchas dudas.</p>
+
+                <h2 class="text-xl">4.13. Justicia, merecimiento y miedo a la muerte</h2>
+                <p>Los seres humanos deseamos que el mundo sea justo: que el bueno reciba recompensa y el malo castigo. También nos cuesta aceptar que la muerte pueda ser definitiva y que algunas pérdidas no tengan reparación.</p>
+                <p>Las creencias religiosas pueden responder a esas necesidades mediante ideas de justicia última, continuidad o sentido. Es importante distinguir el consuelo que ofrecen de la demostración de que esas promesas describen hechos.</p>
+
+                <div class="mt-6 p-4 sm:p-5 rounded-2xl bg-purple-500/10 border border-purple-400/40 text-purple-100">
+                    <strong class="text-purple-300">Una advertencia:</strong> identificar un mecanismo psicológico no refuta automáticamente una creencia. Explicar por qué alguien cree algo no demuestra que sea falso. Pero tampoco demuestra que sea verdadero. Para evaluar la afirmación hace falta examinar sus razones y sus pruebas.
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================
+             PESTAÑA 5: Parálisis Mental
+             ========================================== -->
+        <section class="tab-pane" data-tab-index="5" data-tab-title="Parálisis Mental">
+            <div class="agency-card rounded-3xl p-5 sm:p-8 prose-custom">
+                <span class="text-xs font-bold uppercase tracking-widest text-cyan-400">Riesgos Conductuales</span>
+                <h1 class="font-display text-2xl sm:text-3xl font-extrabold text-white mt-1 mb-4">
+                    La parálisis mental: cuando la esperanza sustituye a la acción
+                </h1>
+
+                <p>La esperanza puede sostener a una persona durante una etapa difícil. El problema aparece cuando la esperanza se convierte en un plan completo y elimina las acciones necesarias.</p>
+                <p>No toda persona que reza se vuelve pasiva. Hay creyentes que oran y trabajan, que rezan y consultan al médico, que piden protección y preparan alternativas. La cuestión es funcional: <strong class="text-cyan-300">¿la práctica acompaña la acción o la reemplaza?</strong></p>
+
+                <h2 class="text-xl">5.1. Esperar una señal en lugar de decidir</h2>
+                <p>Una persona lleva meses considerando cambiar de empleo. No compara ofertas, no actualiza su currículum ni consulta a nadie. Espera una señal inequívoca. Mientras tanto, las condiciones empeoran.</p>
+                <p>Puede que una persona encuentre sentido en interpretar ciertos acontecimientos como señales. Pero si la señal se convierte en requisito para cualquier decisión, la incertidumbre se vuelve una excusa permanente para no elegir.</p>
+                <p>La vida no siempre ofrece instrucciones claras. Muchas decisiones se toman con información incompleta y posibilidad de corregir.</p>
+
+                <h2 class="text-xl">5.2. Rezar por empleo sin buscarlo</h2>
+                <p>La oración puede dar serenidad antes de una entrevista. No prepara por sí sola un currículum, no enseña una habilidad y no sustituye una conversación con un empleador.</p>
+                <p>Una estrategia razonable podría incluir rezar si la persona lo desea y, además:</p>
+                <ul class="space-y-2 my-4 pl-5 list-disc text-slate-300">
+                    <li>Revisar su experiencia y capacidades.</li>
+                    <li>Preparar un currículum claro.</li>
+                    <li>Identificar sectores y ofertas reales.</li>
+                    <li>Enviar candidaturas adaptadas.</li>
+                    <li>Practicar entrevistas.</li>
+                    <li>Pedir orientación y contactos.</li>
+                    <li>Revisar semanalmente qué funciona.</li>
+                </ul>
+                <p>Si la oración anima a actuar, puede integrarse en el proceso personal. Si se utiliza para evitarlo, aparece el coste de oportunidad.</p>
+
+                <h2 class="text-xl">5.3. Esperar que Dios resuelva una deuda</h2>
+                <p>Una deuda no desaparece por el mero hecho de esperar. Requiere conocer el importe, los intereses, las fechas, los ingresos y las opciones de negociación.</p>
+                <p>La persona puede rezar para encontrar calma. Pero también debe revisar el contrato, priorizar gastos, hablar con el acreedor, buscar asesoramiento y evitar comprometerse con soluciones fraudulentas.</p>
+
+                <h2 class="text-xl">5.4. Enfermedad: el riesgo de reemplazar la atención médica</h2>
+                <p>Interpretar una enfermedad exclusivamente como prueba divina puede ser peligroso si lleva a retrasar un diagnóstico o abandonar un tratamiento indicado.</p>
+                <p>Una práctica espiritual puede acompañar el sufrimiento, ayudar a encontrar comunidad o dar consuelo. No debe sustituir la evaluación clínica. Ante síntomas preocupantes, corresponde acudir a profesionales sanitarios y seguir las recomendaciones médicas.</p>
+
+                <h2 class="text-xl">5.5. Aceptar injusticias porque «Dios se encargará»</h2>
+                <p>La esperanza en una justicia futura puede aliviar el dolor. Pero también puede utilizarse para pedir a las víctimas que acepten abusos que podrían denunciarse o prevenirse.</p>
+                <p>Si una persona sufre violencia, explotación o discriminación, la respuesta humana incluye protección, apoyo, asesoramiento y mecanismos institucionales. La idea de que una fuerza superior hará justicia no debería servir para desactivar la justicia que podemos construir aquí.</p>
+
+                <h2 class="text-xl">5.6. Coste de oportunidad</h2>
+                <p>El coste de oportunidad es el valor de la mejor alternativa a la que renunciamos al elegir otra opción. Si una persona espera seis meses una señal y durante ese tiempo no busca empleo, no estudia ni pide ayuda, el coste no es solo el tiempo transcurrido: son las oportunidades que quizá perdió.</p>
+                <p>No siempre actuar garantiza un buen resultado. Pero no actuar también tiene consecuencias.</p>
+
+                <h2 class="text-xl">5.7. La pregunta de diagnóstico</h2>
+                <p>Ante una práctica religiosa, puede plantearse una pregunta sencilla:</p>
+                <blockquote class="my-4 p-5 rounded-2xl bg-slate-900/90 border-l-4 border-cyan-400 text-white font-medium">
+                    Después de rezar, ¿la persona está más preparada para afrontar el problema o ha decidido que ya no necesita hacer nada?
+                </blockquote>
+                <p class="!mb-0">La respuesta no juzga la fe de nadie. Examina el efecto concreto de una conducta en una situación concreta.</p>
+            </div>
+        </section>
+
+        <!-- ==========================================
+             PESTAÑA 6: Explicaciones Infalibles
+             ========================================== -->
+        <section class="tab-pane" data-tab-index="6" data-tab-title="Explicaciones Infalibles">
+            <div class="agency-card rounded-3xl p-5 sm:p-8 prose-custom">
+                <span class="text-xs font-bold uppercase tracking-widest text-cyan-400">Falsabilidad y Método</span>
+                <h1 class="font-display text-2xl sm:text-3xl font-extrabold text-white mt-1 mb-4">
+                    La trampa de las explicaciones que nunca pueden perder
+                </h1>
+
+                <p>Consideremos cuatro afirmaciones:</p>
+                <ul class="space-y-2 my-4 pl-5 list-disc text-slate-300">
+                    <li>Si ocurre algo bueno: «Dios me ayudó».</li>
+                    <li>Si ocurre algo malo: «Dios tiene un plan».</li>
+                    <li>Si no ocurre nada: «Dios actúa de maneras misteriosas».</li>
+                    <li>Si la petición no se cumple: «La respuesta fue no» o «todavía no».</li>
+                </ul>
+                <p>Cada frase puede formar parte de una teología coherente. El problema epistemológico aparece cuando cualquier resultado posible se utiliza como confirmación de la misma hipótesis.</p>
+
+                <h2 class="text-xl">6.1. ¿Qué significa falsabilidad?</h2>
+                <p>Una afirmación es falsable cuando podemos describir alguna observación posible que entraría en conflicto con ella. Por ejemplo: «mañana a las nueve lloverá en esta ciudad» puede contrastarse con el tiempo observado.</p>
+                <p>La falsabilidad es una idea importante en la filosofía de la ciencia, asociada especialmente a Karl Popper. No significa que toda afirmación significativa deba poder probarse en un laboratorio. Las afirmaciones morales, metafísicas, estéticas o existenciales no siempre funcionan como hipótesis científicas.</p>
+                <p>La pregunta correcta no es «¿puedo meter a Dios en un laboratorio?», sino «¿qué tipo de afirmación estoy haciendo?».</p>
+
+                <h2 class="text-xl">6.2. Cuatro tipos de afirmación</h2>
+                <ol class="space-y-2.5 my-4 pl-5 list-decimal text-slate-300">
+                    <li><strong class="text-white">Empírica:</strong> afirma algo observable sobre el mundo. Ejemplo: una oración concreta reduce determinada tasa de complicaciones médicas.</li>
+                    <li><strong class="text-white">Metafísica:</strong> se refiere a la naturaleza última de la realidad. Ejemplo: existe una causa primera trascendente.</li>
+                    <li><strong class="text-white">Simbólica:</strong> expresa un significado mediante imágenes o relatos. Ejemplo: una luz representa esperanza.</li>
+                    <li><strong class="text-white">Existencial:</strong> orienta la forma de vivir. Ejemplo: mi fe me ayuda a afrontar la muerte.</li>
+                </ol>
+                <p>Las afirmaciones empíricas requieren evidencia empírica adecuada. Las metafísicas necesitan argumentos filosóficos y claridad conceptual. Las simbólicas se interpretan por su sentido. Las existenciales se pueden examinar por su coherencia y consecuencias vitales.</p>
+                <p>No conviene exigir a todas el mismo método, ni utilizar el carácter metafísico de una afirmación para proteger de la crítica una promesa empírica.</p>
+
+                <h2 class="text-xl">6.3. La prueba de revisión</h2>
+                <p>Una pregunta intelectualmente saludable es:</p>
+                <div class="my-4 p-4 rounded-2xl bg-cyan-500/10 border border-cyan-400/40 font-display font-bold text-cyan-200">
+                    ¿Qué resultado, argumento o experiencia me haría revisar esta interpretación?
+                </div>
+                <p>Si la respuesta es «ninguno», la persona quizá no está tratando la idea como una hipótesis que pueda corregirse. Puede estar expresando una convicción de identidad, una confianza o una decisión existencial. Eso no la vuelve automáticamente falsa, pero sí limita lo que puede afirmarse que se ha demostrado.</p>
+                <p class="!mb-0">La madurez intelectual no exige abandonar toda convicción. Exige saber qué razones la sostienen, qué dudas existen y qué podría obligarnos a revisarla.</p>
+            </div>
+        </section>
+
+        <!-- ==========================================
+             PESTAÑA 7: Sufrimiento y Justicia
+             ========================================== -->
+        <section class="tab-pane" data-tab-index="7" data-tab-title="Sufrimiento y Justicia">
+            <div class="agency-card rounded-3xl p-5 sm:p-8 prose-custom">
+                <span class="text-xs font-bold uppercase tracking-widest text-cyan-400">El Problema del Mal</span>
+                <h1 class="font-display text-2xl sm:text-3xl font-extrabold text-white mt-1 mb-4">
+                    El problema del sufrimiento y la justicia
+                </h1>
+
+                <p>El problema del mal es una de las cuestiones clásicas de la filosofía de la religión. Se vuelve especialmente agudo cuando se combina una concepción de Dios como poderoso, conocedor de todo y perfectamente bueno con la existencia de sufrimiento intenso.</p>
+
+                <h2 class="text-xl">7.1. La formulación básica</h2>
+                <p>El razonamiento puede exponerse así:</p>
+                <ol class="space-y-2 my-4 pl-5 list-decimal text-slate-300">
+                    <li>Si existe un Dios omnipotente, podría evitar ciertos sufrimientos.</li>
+                    <li>Si es omnisciente, conocería esos sufrimientos.</li>
+                    <li>Si es perfectamente bueno, tendría razones para impedir al menos algunos de ellos.</li>
+                    <li>Sin embargo, existe sufrimiento extremo, incluido el de seres que no parecen responsables de lo ocurrido.</li>
+                </ol>
+                <p>La tensión no resuelve por sí sola la cuestión de Dios. Obliga a examinar las respuestas propuestas y sus costes.</p>
+
+                <h2 class="text-xl">7.2. Respuestas teístas habituales</h2>
+
+                <h3 class="text-lg">El libre albedrío</h3>
+                <p>Una defensa sostiene que la libertad humana tiene un valor tan importante que Dios permite que las personas puedan elegir mal. Si eliminara toda posibilidad de daño, también podría eliminar una parte relevante de la libertad.</p>
+                <p>La respuesta explica parte del mal moral: guerras, abusos, engaños y violencia. Pero no explica fácilmente terremotos, enfermedades congénitas, sufrimiento animal o catástrofes naturales. Además, cabe preguntar por qué una libertad valiosa requeriría permitir daños tan extremos.</p>
+
+                <h3 class="text-lg">La formación del carácter</h3>
+                <p>La llamada teodicea de la formación del alma, asociada en su versión contemporánea a John Hick, propone que un mundo con dificultades puede ser un entorno en el que las personas desarrollen compasión, valentía y madurez.</p>
+                <p>La objeción es evidente: algunas experiencias destruyen, no fortalecen. El sufrimiento de niños pequeños o de animales no parece necesario para desarrollar el carácter de quien observa. Y aun cuando alguien crezca después de una tragedia, eso no demuestra que la tragedia fuera necesaria ni que se le enviara con ese propósito.</p>
+
+                <h3 class="text-lg">La limitación del conocimiento humano</h3>
+                <p>Otra respuesta sostiene que las personas no pueden comprender todas las razones de una divinidad. Es posible que exista una justificación que no alcanzamos a conocer.</p>
+                <p>Esta postura reconoce límites humanos, pero plantea una dificultad: si cualquier sufrimiento puede justificarse mediante razones inaccesibles, ¿qué contenido concreto conserva la afirmación de que Dios es bueno? La apelación al misterio puede ser una expresión de humildad; también puede convertirse en una salida que impide evaluar cualquier objeción.</p>
+
+                <h3 class="text-lg">La compensación futura</h3>
+                <p>Algunas tradiciones sostienen que el sufrimiento será reparado en una existencia futura. Esa esperanza puede ser profundamente consoladora. La cuestión filosófica es si una compensación posterior justifica permitir un daño evitable ahora. Para algunas personas, sí; para otras, una recompensa futura no elimina la pregunta moral sobre la prevención.</p>
+
+                <h2 class="text-xl">7.3. El sufrimiento inocente</h2>
+                <p>Pensemos en un niño que sufre una enfermedad grave, una familia que pierde su vivienda en una catástrofe o un animal herido durante un incendio. No es intelectualmente responsable responder de inmediato que «todo ocurre por algo».</p>
+                <p>Hay una diferencia entre:</p>
+                <ul class="space-y-2 my-4 pl-5 list-disc text-slate-300">
+                    <li><strong class="text-white">Encontrar sentido después de una desgracia:</strong> una persona transforma el dolor en solidaridad, compromiso o una nueva manera de vivir.</li>
+                    <li><strong class="text-white">Afirmar que la desgracia fue enviada con un propósito:</strong> se atribuye a un agente una intención previa.</li>
+                </ul>
+                <p>La primera afirmación describe una respuesta humana posible. La segunda formula una explicación sobre el origen y la finalidad del sufrimiento. No son equivalentes.</p>
+
+                <h2 class="text-xl">7.4. El riesgo moral de justificar el dolor ajeno</h2>
+                <p>Decirle a otra persona que su sufrimiento forma parte de un plan puede consolarla si esa interpretación es suya. Imponérsela desde fuera puede resultar cruel. No conocemos necesariamente el significado que esa persona atribuye a su experiencia.</p>
+                <p class="!mb-0">A veces la respuesta más honesta y compasiva no es ofrecer una explicación total, sino acompañar, aliviar el daño y hacer lo que esté a nuestro alcance.</p>
+            </div>
+        </section>
+
+        <!-- ==========================================
+             PESTAÑA 8: Oración y Evidencia
+             ========================================== -->
+        <section class="tab-pane" data-tab-index="8" data-tab-title="Oración y Evidencia">
+            <div class="agency-card rounded-3xl p-5 sm:p-8 prose-custom">
+                <span class="text-xs font-bold uppercase tracking-widest text-cyan-400">Análisis Empírico</span>
+                <h1 class="font-display text-2xl sm:text-3xl font-extrabold text-white mt-1 mb-4">
+                    Oración, causalidad y evidencia
+                </h1>
+
+                <p>La palabra «oración» agrupa prácticas diferentes. Para hablar con rigor conviene separar sus funciones.</p>
+
+                <h2 class="text-xl">8.1. Cinco usos distintos</h2>
+                <ol class="space-y-2 my-4 pl-5 list-decimal text-slate-300">
+                    <li><strong class="text-white">Expresión emocional:</strong> poner en palabras miedo, gratitud, tristeza o esperanza.</li>
+                    <li><strong class="text-white">Meditación o atención:</strong> repetir una fórmula o mantener la atención en un tema.</li>
+                    <li><strong class="text-white">Ritual comunitario:</strong> compartir una práctica con otras personas.</li>
+                    <li><strong class="text-white">Petición sobrenatural:</strong> solicitar que una divinidad intervenga.</li>
+                    <li><strong class="text-white">Afirmación causal:</strong> sostener que un resultado concreto ocurrió debido a esa intervención.</li>
+                </ol>
+                <p>Las primeras tres funciones pueden estudiarse como experiencias psicológicas, culturales y sociales. La cuarta expresa una creencia religiosa. La quinta añade una afirmación sobre cómo funciona el mundo y requiere evidencia adecuada si se refiere a resultados observables.</p>
+
+                <h2 class="text-xl">8.2. El ensayo STEP</h2>
+                <p>Un estudio relevante es el <em>Study of the Therapeutic Effects of Intercessory Prayer</em> (STEP), publicado por Herbert Benson y colaboradores en 2006 en <em>American Heart Journal</em>.</p>
+                <p>El ensayo incluyó 1.802 pacientes sometidos a cirugía de bypass coronario en seis hospitales. Los participantes fueron asignados a grupos que recibían o no oración intercesora, con distintas condiciones de información sobre si serían objeto de esa oración.</p>
+                <p>En los dos grupos que no sabían con certeza si recibirían oración, las complicaciones se observaron en el 52 % de quienes recibieron oración y en el 51 % de quienes no la recibieron. El estudio no encontró una mejora en la recuperación sin complicaciones atribuible a la oración intercesora. En el grupo que sabía con certeza que recibiría oración, las complicaciones fueron del 59 %, frente al 52 % del grupo que recibió oración sin esa certeza; los autores no concluyeron que la oración causara ese aumento, y los resultados deben interpretarse dentro del diseño y las limitaciones del ensayo.</p>
+                <p>¿Qué permite concluir? Que en esa población, con ese protocolo y esos resultados medidos, el estudio no encontró el beneficio esperado de la oración intercesora. No demuestra que toda oración carezca de valor, ni resuelve la existencia de Dios, ni permite extrapolar sin cautela a todas las prácticas religiosas o situaciones médicas.</p>
+
+                <h2 class="text-xl">8.3. Qué evidencia sería pertinente</h2>
+                <p>Para evaluar una afirmación como «la oración intercesora reduce las complicaciones después de una operación» habría que definir:</p>
+                <ul class="space-y-2 my-4 pl-5 list-disc text-slate-300">
+                    <li>Qué cuenta como oración intercesora.</li>
+                    <li>Quiénes reciben la intervención y quiénes forman el grupo de comparación.</li>
+                    <li>Qué resultado médico se mide.</li>
+                    <li>Durante cuánto tiempo.</li>
+                    <li>Cómo se evitan sesgos y diferencias entre grupos.</li>
+                    <li>Cuántas personas participan.</li>
+                    <li>Si el resultado se reproduce en otros estudios.</li>
+                </ul>
+                <p>No basta con reunir testimonios de casos favorables. Los testimonios son valiosos para comprender experiencias individuales, pero no permiten por sí solos calcular qué habría ocurrido sin la oración.</p>
+
+                <h2 class="text-xl">8.4. Ausencia de evidencia y evidencia de ausencia</h2>
+                <p>No encontrar un efecto en un estudio no demuestra que sea imposible cualquier efecto en cualquier circunstancia. Pero tampoco obliga a considerar igualmente probable una afirmación para la que no se ha encontrado apoyo suficiente.</p>
+                <p class="!mb-0">La conclusión debe ajustarse a los datos: ni más fuerte ni más débil.</p>
+            </div>
+        </section>
+
+        <!-- ==========================================
+             PESTAÑA 9: Autonomía y Cooperación
+             ========================================== -->
+        <section class="tab-pane" data-tab-index="9" data-tab-title="Autonomía y Cooperación">
+            <div class="agency-card rounded-3xl p-5 sm:p-8 prose-custom">
+                <span class="text-xs font-bold uppercase tracking-widest text-cyan-400">Ética de la Acción</span>
+                <h1 class="font-display text-2xl sm:text-3xl font-extrabold text-white mt-1 mb-4">
+                    Autonomía, responsabilidad y cooperación
+                </h1>
+
+                <p>Una ética de la acción humana no necesita prometer control absoluto. Puede proponer una forma más sensata de vivir: comprender el problema, reconocer límites y actuar con otros.</p>
+
+                <h2 class="text-xl">9.1. Pensar antes de actuar</h2>
+                <p>No todo impulso merece convertirse en decisión. Antes de responder conviene describir el problema sin adornos: qué ocurre, desde cuándo, a quién afecta y qué resultado se necesita.</p>
+                <p>«Mi vida es un desastre» expresa una vivencia. «No puedo pagar el alquiler de este mes; me faltan 180 euros y vence el día 30» describe un problema sobre el que se puede trabajar.</p>
+
+                <h2 class="text-xl">9.2. Aprender lo que no se sabe</h2>
+                <p>La ignorancia no es una condena; es información sobre el siguiente paso. Si no sabemos negociar una deuda, podemos buscar orientación. Si desconocemos una herramienta, podemos aprenderla. Si no entendemos un diagnóstico, podemos pedir al profesional que lo explique.</p>
+                <p>La humildad práctica consiste en no fingir conocimiento.</p>
+
+                <h2 class="text-xl">9.3. Pedir ayuda humana</h2>
+                <p>Pedir ayuda no es fracasar. Los seres humanos dependemos unos de otros: familia, amistades, profesionales, servicios públicos, asociaciones y comunidades. La cooperación amplía las capacidades individuales.</p>
+                <p>La crítica a delegar todo en una fuerza sobrenatural no debe terminar en la fantasía del individuo autosuficiente. Una sociedad justa se construye precisamente reconociendo que las personas tienen necesidades y vulnerabilidades.</p>
+
+                <h2 class="text-xl">9.4. Preparar alternativas y revisar decisiones</h2>
+                <p>Un plan sin alternativa puede romperse ante el primer imprevisto. Conviene preguntarse: «¿Qué haré si esto no funciona?». Después hay que revisar los resultados. Si una estrategia no produce efecto, no se trata de repetirla indefinidamente por orgullo: se modifica.</p>
+
+                <h2 class="text-xl">9.5. Responsabilidad sin culpabilización</h2>
+                <p>La responsabilidad individual tiene límites. No se puede atribuir la pobreza exclusivamente a la falta de esfuerzo, ni una enfermedad a una supuesta falta de fe, ni un accidente a una deficiencia moral.</p>
+                <p class="!mb-0">Hay factores estructurales: economía, educación, acceso a servicios, discriminación, vivienda, salud y distribución del poder. La autonomía es la capacidad de actuar dentro de una realidad compartida, no la obligación de vencerla todo en solitario.</p>
+            </div>
+        </section>
+
+        <!-- ==========================================
+             PESTAÑA 10: Argumentos de la Fe
+             ========================================== -->
+        <section class="tab-pane" data-tab-index="10" data-tab-title="Argumentos de la Fe">
+            <div class="agency-card rounded-3xl p-5 sm:p-8 prose-custom">
+                <span class="text-xs font-bold uppercase tracking-widest text-cyan-400">Honestidad Intelectual</span>
+                <h1 class="font-display text-2xl sm:text-3xl font-extrabold text-white mt-1 mb-4">
+                    Los mejores argumentos a favor de la fe y sus límites
+                </h1>
+
+                <p>Una crítica intelectualmente honesta debe presentar los argumentos favorables en su versión más sólida, no en su versión más fácil de ridiculizar.</p>
+
+                <h2 class="text-xl">10.1. La fe proporciona esperanza</h2>
+                <p>La esperanza puede ayudar a soportar situaciones que no se pueden resolver inmediatamente. Puede impedir que una persona se hunda en la desesperación y darle un horizonte.</p>
+                <p><strong class="text-cyan-300">Límite:</strong> que una creencia ayude emocionalmente no demuestra que su contenido sobrenatural sea verdadero. Un relato puede ser consolador sin ser una descripción literal del mundo.</p>
+
+                <h2 class="text-xl">10.2. La religión crea comunidad</h2>
+                <p>Las comunidades religiosas pueden proporcionar compañía, ayuda material, voluntariado, redes de cuidado y pertenencia. En situaciones de duelo, enfermedad o aislamiento, esos vínculos pueden ser importantes.</p>
+                <p><strong class="text-cyan-300">Límite:</strong> la comunidad no es propiedad exclusiva de la religión. También existen redes laicas, asociaciones vecinales, sindicatos, grupos culturales y organizaciones solidarias. Además, una comunidad religiosa puede ayudar o perjudicar según sus prácticas concretas.</p>
+
+                <h2 class="text-xl">10.3. Los rituales organizan la vida</h2>
+                <p>Los rituales marcan transiciones, ordenan el tiempo y permiten expresar emociones compartidas. Una ceremonia puede ofrecer un marco para el duelo o la gratitud.</p>
+                <p><strong class="text-cyan-300">Límite:</strong> la utilidad de un ritual no demuestra automáticamente que las afirmaciones metafísicas asociadas sean ciertas.</p>
+
+                <h2 class="text-xl">10.4. La fe puede impulsar el altruismo</h2>
+                <p>Una persona puede ayudar a otras porque considera que su religión se lo exige o porque ve en ello una expresión de amor al prójimo.</p>
+                <p><strong class="text-cyan-300">Límite:</strong> la motivación religiosa no garantiza una conducta moral, del mismo modo que la ausencia de religión no garantiza egoísmo. Hay que evaluar las acciones y sus consecuencias.</p>
+
+                <h2 class="text-xl">10.5. La experiencia religiosa puede ser significativa</h2>
+                <p>Una experiencia de unidad, trascendencia, presencia o transformación puede ser profundamente real para quien la vive. No corresponde negar que la persona haya tenido esa experiencia.</p>
+                <p><strong class="text-cyan-300">Límite:</strong> la interpretación de la experiencia es una cuestión distinta. Sentir una presencia no demuestra por sí solo que exista un agente sobrenatural externo. La experiencia merece escucha; su explicación merece análisis.</p>
+
+                <h2 class="text-xl">10.6. La ciencia no responde todas las preguntas de sentido</h2>
+                <p>La ciencia investiga el mundo mediante métodos empíricos. No decide por sí sola qué vida merece ser vivida, qué es justo o qué debemos amar. Esas preguntas también requieren filosofía, deliberación ética, cultura y experiencia.</p>
+                <p><strong class="text-cyan-300">Límite:</strong> que la ciencia no responda una pregunta no significa que cualquier respuesta propuesta sea verdadera. La ausencia de una respuesta científica no constituye evidencia automática a favor de una explicación sobrenatural.</p>
+
+                <h2 class="text-xl">10.7. Una evaluación equilibrada</h2>
+                <p>El balance razonable es doble:</p>
+                <ul class="space-y-2 my-4 pl-5 list-disc text-slate-300">
+                    <li>Una creencia puede tener valor emocional, comunitario o moral sin que eso pruebe su verdad sobrenatural.</li>
+                    <li>La falta de demostración de una afirmación sobrenatural no obliga a despreciar a quienes encuentran valor humano en una tradición religiosa.</li>
+                </ul>
+                <p class="!mb-0">La crítica rigurosa no necesita humillar. Necesita distinguir.</p>
+            </div>
+        </section>
+
+        <!-- ==========================================
+             PESTAÑA 11: Disciplina Agnóstica
+             ========================================== -->
+        <section class="tab-pane" data-tab-index="11" data-tab-title="Disciplina Agnóstica">
+            <div class="agency-card rounded-3xl p-5 sm:p-8 prose-custom">
+                <span class="text-xs font-bold uppercase tracking-widest text-cyan-400">Rigor Epistemológico</span>
+                <h1 class="font-display text-2xl sm:text-3xl font-extrabold text-white mt-1 mb-4">
+                    El agnosticismo como disciplina intelectual
+                </h1>
+
+                <p>El agnosticismo se relaciona con lo que una persona considera que puede conocer acerca de la existencia de Dios. No debe confundirse automáticamente con ateísmo, indiferencia o indecisión.</p>
+
+                <h2 class="text-xl">11.1. Teísmo, ateísmo y agnosticismo</h2>
+                <ul class="space-y-2.5 my-4 pl-5 list-disc text-slate-300">
+                    <li><strong class="text-white">Teísmo:</strong> sostiene la existencia de una o más divinidades, según la definición de cada tradición.</li>
+                    <li><strong class="text-white">Ateísmo:</strong> puede significar ausencia de creencia en dioses o afirmación de que no existen; el uso varía según el autor y el contexto.</li>
+                    <li><strong class="text-white">Agnosticismo:</strong> sostiene que el conocimiento sobre la existencia o naturaleza de Dios no está disponible, no se ha alcanzado o no puede establecerse con suficiente fundamento.</li>
+                </ul>
+                <p>Estas posiciones no siempre son categorías excluyentes. Una persona puede ser agnóstica respecto al conocimiento y, a la vez, inclinarse probabilísticamente hacia el teísmo o el ateísmo. Lo importante es no atribuir a alguien una postura más específica de la que declara.</p>
+
+                <h2 class="text-xl">11.2. Creer, saber y considerar probable</h2>
+                <p>No son lo mismo:</p>
+                <ul class="space-y-2 my-4 pl-5 list-disc text-slate-300">
+                    <li><strong class="text-white">Creer:</strong> aceptar una proposición como verdadera o confiar en ella.</li>
+                    <li><strong class="text-white">Saber:</strong> tener una creencia verdadera respaldada por razones suficientemente sólidas, según la teoría del conocimiento que se adopte.</li>
+                    <li><strong class="text-white">Considerar probable:</strong> pensar que una hipótesis tiene más posibilidades que otras, sin afirmar certeza.</li>
+                </ul>
+                <p>Una persona puede creer sin afirmar que sabe. Otra puede considerar que una hipótesis es improbable, pero reconocer que no puede descartarla con certeza absoluta.</p>
+
+                <h2 class="text-xl">11.3. Carga de la prueba</h2>
+                <p>Quien afirma que una intervención sobrenatural produjo un resultado concreto debe explicar por qué lo sostiene y qué evidencia lo respalda. Eso no significa que la persona escéptica quede exenta de justificar sus propias afirmaciones.</p>
+                <p>Si alguien afirma «Dios curó esta enfermedad», cabe preguntar qué permite distinguir esa causa de la evolución natural, el tratamiento, el error diagnóstico o una combinación de factores. Si otra persona afirma «Dios no existe», también debe aclarar qué entiende por Dios y qué argumentos utiliza.</p>
+                <p>La carga de la prueba depende de la afirmación concreta que se formula.</p>
+
+                <h2 class="text-xl">11.4. Humildad epistémica</h2>
+                <p>La humildad epistémica es reconocer los límites del propio conocimiento. No es renunciar a pensar. Es evitar la falsa seguridad.</p>
+                <p>Puede expresarse así:</p>
+                <ul class="space-y-2 my-4 pl-5 list-disc text-cyan-200">
+                    <li>No sé.</li>
+                    <li>No tengo evidencia suficiente.</li>
+                    <li>Esta explicación me parece más probable, pero puedo revisarla.</li>
+                    <li>Esta cuestión quizá excede lo que los métodos disponibles pueden resolver.</li>
+                </ul>
+                <p class="!mb-0">El agnosticismo puede ser una disciplina activa: examinar argumentos, reconocer incertidumbre y resistir la tentación de rellenar cada vacío con una respuesta definitiva.</p>
+            </div>
+        </section>
+
+        <!-- ==========================================
+             PESTAÑA 12: Experimentos Mentales
+             ========================================== -->
+        <section class="tab-pane" data-tab-index="12" data-tab-title="Experimentos Mentales">
+            <div class="agency-card rounded-3xl p-5 sm:p-8 prose-custom">
+                <span class="text-xs font-bold uppercase tracking-widest text-cyan-400">Laboratorio de Razón</span>
+                <h1 class="font-display text-2xl sm:text-3xl font-extrabold text-white mt-1 mb-4">
+                    Experimentos mentales y ejercicios de pensamiento
+                </h1>
+                <p>Los siguientes escenarios no son pruebas de la existencia o inexistencia de Dios. Son instrumentos para examinar cómo razonamos.</p>
+
+                <div class="space-y-5 mt-6">
+                    <!-- Experimento 1 -->
+                    <div class="p-5 rounded-2xl bg-slate-900/80 border border-slate-800">
+                        <h2 class="text-lg sm:text-xl !mt-0 text-cyan-300">Experimento 1. Dos peticiones opuestas</h2>
+                        <p>Dos personas piden a Dios que sus respectivos equipos ganen una final. Solo uno puede ganar.</p>
+                        <p><strong class="text-white">Preguntas:</strong> Si gana el equipo A, ¿qué permite concluir que Dios respondió a A y no simplemente que el partido tuvo un resultado? ¿Cómo interpretará el equipo B lo ocurrido? ¿Qué explicación podría aceptar ambos sin contradicción?</p>
+                        <p class="!mb-0 text-cyan-100/90"><strong class="text-cyan-400">Reflexión:</strong> La experiencia de victoria puede ser interpretada religiosamente, pero el resultado por sí solo no identifica su causa.</p>
+                    </div>
+
+                    <!-- Experimento 2 -->
+                    <div class="p-5 rounded-2xl bg-slate-900/80 border border-slate-800">
+                        <h2 class="text-lg sm:text-xl !mt-0 text-cyan-300">Experimento 2. Tres estrategias ante el mismo problema</h2>
+                        <p>Tres personas buscan empleo. La primera reza y busca activamente; la segunda solo reza; la tercera busca activamente sin rezar.</p>
+                        <p><strong class="text-white">Preguntas:</strong> Si la primera consigue trabajo, ¿qué parte del resultado puede atribuirse a cada factor? Si la segunda no lo consigue, ¿significa que tuvo poca fe? Si la tercera lo consigue, ¿qué explicación daría cada una?</p>
+                        <p class="!mb-0 text-cyan-100/90"><strong class="text-cyan-400">Reflexión:</strong> Para comparar causas hacen falta más casos, información y un método que controle otros factores. Un solo ejemplo no permite aislar el efecto de la oración.</p>
+                    </div>
+
+                    <!-- Experimento 3 -->
+                    <div class="p-5 rounded-2xl bg-slate-900/80 border border-slate-800">
+                        <h2 class="text-lg sm:text-xl !mt-0 text-cyan-300">Experimento 3. El éxito atribuido a Dios</h2>
+                        <p>Una persona prepara durante meses una oposición, estudia, recibe apoyo y aprueba. Después dice: «Dios me ayudó».</p>
+                        <p><strong class="text-white">Preguntas:</strong> ¿La frase expresa gratitud o una afirmación causal? ¿Es posible que para esa persona ambas cosas estén unidas? ¿Qué evidencia permitiría distinguir una intervención adicional de los factores conocidos?</p>
+                        <p class="!mb-0 text-cyan-100/90"><strong class="text-cyan-400">Reflexión:</strong> Agradecer religiosamente puede ser una expresión personal. La afirmación causal requiere un argumento diferente.</p>
+                    </div>
+
+                    <!-- Experimento 4 -->
+                    <div class="p-5 rounded-2xl bg-slate-900/80 border border-slate-800">
+                        <h2 class="text-lg sm:text-xl !mt-0 text-cyan-300">Experimento 4. Peticiones de religiones diferentes</h2>
+                        <p>Personas de tradiciones distintas piden por el mismo resultado y cada una interpreta lo ocurrido según su marco religioso.</p>
+                        <p><strong class="text-white">Preguntas:</strong> ¿Puede el mismo acontecimiento confirmar interpretaciones incompatibles? ¿Qué criterios externos podrían ayudar a evaluarlas? ¿Es posible que el resultado no confirme ninguna?</p>
+                        <p class="!mb-0 text-cyan-100/90"><strong class="text-cyan-400">Reflexión:</strong> La interpretación cultural influye en el significado que atribuimos a los acontecimientos. Eso no resuelve por sí solo cuál interpretación es verdadera.</p>
+                    </div>
+
+                    <!-- Experimento 5 -->
+                    <div class="p-5 rounded-2xl bg-slate-900/80 border border-slate-800">
+                        <h2 class="text-lg sm:text-xl !mt-0 text-cyan-300">Experimento 5. El justo que sufre y el injusto que prospera</h2>
+                        <p>Una persona honesta pierde su casa por una catástrofe. Otra, que ha actuado de manera abusiva, obtiene riqueza.</p>
+                        <p><strong class="text-white">Preguntas:</strong> ¿El mundo distribuye siempre las consecuencias según el mérito? ¿Qué significa decir que existe justicia divina si la justicia no se observa en esta vida? ¿Qué riesgos tiene explicar el dolor del inocente como una lección?</p>
+                        <p class="!mb-0 text-cyan-100/90"><strong class="text-cyan-400">Reflexión:</strong> La realidad observable no garantiza una correspondencia simple entre virtud y prosperidad. La esperanza en una justicia última es una creencia metafísica, no una regularidad que podamos dar por demostrada.</p>
+                    </div>
+
+                    <!-- Experimento 6 -->
+                    <div class="p-5 rounded-2xl bg-slate-900/80 border border-slate-800">
+                        <h2 class="text-lg sm:text-xl !mt-0 text-cyan-300">Experimento 6. La señal que nunca llega</h2>
+                        <p>Una persona aplaza durante años una decisión porque espera una señal inequívoca.</p>
+                        <p><strong class="text-white">Preguntas:</strong> ¿Cuánto tiempo es razonable esperar? ¿Qué coste tiene no decidir? ¿Podría tomar una decisión provisional y revisarla? ¿Qué diferencia hay entre prudencia y evitación?</p>
+                        <p class="!mb-0 text-cyan-100/90"><strong class="text-cyan-400">Reflexión:</strong> No toda decisión necesita certeza. A veces la madurez consiste en actuar con información incompleta y asumir la posibilidad de corregir.</p>
+                    </div>
+
+                    <!-- Experimento 7 -->
+                    <div class="p-5 rounded-2xl bg-slate-900/80 border border-slate-800">
+                        <h2 class="text-lg sm:text-xl !mt-0 text-cyan-300">Experimento 7. La ayuda humana invisibilizada</h2>
+                        <p>Una persona enferma recibe atención médica, apoyo de una vecina, transporte de familiares y asistencia de una institución. Al recuperarse, atribuye todo exclusivamente a Dios.</p>
+                        <p><strong class="text-white">Preguntas:</strong> ¿Qué papel desempeñaron las personas y los recursos? ¿Agradecer a Dios obliga a olvidar a quienes ayudaron? ¿Se pueden mantener simultáneamente una interpretación espiritual y el reconocimiento de causas humanas?</p>
+                        <p class="!mb-0 text-cyan-100/90"><strong class="text-cyan-400">Reflexión:</strong> Una interpretación religiosa no debería borrar el trabajo, el conocimiento y la solidaridad de otras personas.</p>
+                    </div>
+
+                    <!-- Experimento 8 -->
+                    <div class="p-5 rounded-2xl bg-slate-900/80 border border-slate-800">
+                        <h2 class="text-lg sm:text-xl !mt-0 text-cyan-300">Experimento 8. El resultado redefinido</h2>
+                        <p>Alguien pide un empleo. No lo obtiene. Primero piensa que la petición no fue escuchada; después afirma que Dios le evitó un lugar que habría sido malo para él.</p>
+                        <p><strong class="text-white">Preguntas:</strong> ¿Qué información permitiría saber si ese empleo habría sido perjudicial? ¿La explicación apareció antes o después del resultado? ¿Qué resultado podría contradecirla?</p>
+                        <p class="!mb-0 text-cyan-100/90"><strong class="text-cyan-400">Reflexión:</strong> Reinterpretar puede ayudar a aceptar una decepción, pero no demuestra que el desenlace estuviera planificado.</p>
+                    </div>
+
+                    <!-- Experimento 9 -->
+                    <div class="p-5 rounded-2xl bg-slate-900/80 border border-slate-800">
+                        <h2 class="text-lg sm:text-xl !mt-0 text-cyan-300">Experimento 9. La petición y la responsabilidad</h2>
+                        <p>Una persona pide que desaparezca un conflicto familiar, pero evita hablar con los demás, reconocer su parte o buscar mediación.</p>
+                        <p><strong class="text-white">Preguntas:</strong> ¿Qué acciones están bajo su control? ¿Puede la oración prepararla para conversar? ¿En qué momento la petición se convierte en sustituto de la reparación?</p>
+                        <p class="!mb-0 text-cyan-100/90"><strong class="text-cyan-400">Reflexión:</strong> Una práctica espiritual puede acompañar la responsabilidad; no puede realizar por otra persona la conversación pendiente.</p>
+                    </div>
+
+                    <!-- Experimento 10 -->
+                    <div class="p-5 rounded-2xl bg-slate-900/80 border border-slate-800">
+                        <h2 class="text-lg sm:text-xl !mt-0 text-cyan-300">Experimento 10. El límite de la explicación</h2>
+                        <p>Dos personas sufren una pérdida semejante. Una encuentra consuelo en la idea de un plan divino; la otra considera esa idea inaceptable.</p>
+                        <p><strong class="text-white">Preguntas:</strong> ¿Debemos imponer una explicación única? ¿Qué necesita cada persona para atravesar el duelo? ¿Puede acompañarse sin resolver el misterio?</p>
+                        <p class="!mb-0 text-cyan-100/90"><strong class="text-cyan-400">Reflexión:</strong> Respetar la experiencia ajena implica no convertir nuestras respuestas en obligaciones para los demás.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================
+             PESTAÑA 13: Método Práctico
+             ========================================== -->
+        <section class="tab-pane" data-tab-index="13" data-tab-title="Método Práctico">
+            <div class="agency-card rounded-3xl p-5 sm:p-8 prose-custom">
+                <span class="text-xs font-bold uppercase tracking-widest text-cyan-400">Acción Verificable</span>
+                <h1 class="font-display text-2xl sm:text-3xl font-extrabold text-white mt-1 mb-4">
+                    Método práctico: de esperar milagros a construir posibilidades
+                </h1>
+
+                <p>Este método no garantiza resultados. Su objetivo es transformar un problema difuso en una secuencia de acciones observables y revisables.</p>
+
+                <h2 class="text-xl">13.1. Los doce pasos</h2>
+                <ol class="space-y-2.5 my-4 pl-5 list-decimal text-slate-300">
+                    <li><strong class="text-white">Definir el problema con precisión.</strong> Evitar frases generales. Describir qué sucede y qué se necesita.</li>
+                    <li><strong class="text-white">Separar hechos de interpretaciones.</strong> «No me han respondido» es un hecho; «nadie quiere ayudarme» es una interpretación.</li>
+                    <li><strong class="text-white">Identificar qué está bajo control propio y qué no.</strong> No confundir influencia con control absoluto.</li>
+                    <li><strong class="text-white">Averiguar qué información falta.</strong> Buscar datos, documentos, plazos y requisitos.</li>
+                    <li><strong class="text-white">Consultar a personas o profesionales adecuados.</strong> No improvisar en cuestiones técnicas, legales, médicas o financieras.</li>
+                    <li><strong class="text-white">Enumerar opciones.</strong> Incluir alternativas imperfectas, no solo la solución ideal.</li>
+                    <li><strong class="text-white">Estimar costes, riesgos y consecuencias.</strong> Considerar dinero, tiempo, energía y posibles daños.</li>
+                    <li><strong class="text-white">Elegir una primera acción pequeña y verificable.</strong> Debe poder realizarse y comprobarse.</li>
+                    <li><strong class="text-white">Establecer un plazo razonable.</strong> Sin plazo, la intención puede convertirse en espera indefinida.</li>
+                    <li><strong class="text-white">Evaluar resultados y corregir el plan.</strong> No insistir ciegamente en una estrategia fallida.</li>
+                    <li><strong class="text-white">Pedir ayuda humana cuando sea necesario.</strong> La cooperación no es una derrota.</li>
+                    <li><strong class="text-white">Mantener esperanza sin confundirla con una garantía.</strong> Esperar un buen resultado no equivale a tenerlo asegurado.</li>
+                </ol>
+
+                <h2 class="text-xl">13.2. Caso práctico A: búsqueda de empleo</h2>
+                <div class="p-5 rounded-2xl bg-slate-900/80 border border-slate-800 space-y-2 text-sm sm:text-base">
+                    <p><strong class="text-cyan-300">Situación:</strong> una persona lleva tres meses sin empleo y espera que aparezca una oportunidad.</p>
+                    <p><strong class="text-white">Paso 1. Definir:</strong> necesita conseguir ingresos y busca un puesto compatible con su experiencia y disponibilidad.</p>
+                    <p><strong class="text-white">Paso 2. Separar hechos:</strong> tiene experiencia en mantenimiento, pero no ha actualizado el currículum y ha enviado pocas candidaturas. «No hay trabajo para mí» todavía es una conclusión no demostrada.</p>
+                    <p><strong class="text-white">Paso 3. Control:</strong> puede actualizar el currículum, identificar ofertas, formarse y contactar empresas. No controla la decisión final del empleador ni el estado del mercado.</p>
+                    <p><strong class="text-white">Paso 4. Información:</strong> averigua qué perfiles se demandan, qué acreditaciones se exigen y qué canales funcionan en su zona.</p>
+                    <p><strong class="text-white">Paso 5. Consulta:</strong> pide revisión del currículum a una persona con experiencia en selección o a un servicio de orientación laboral.</p>
+                    <p><strong class="text-white">Paso 6. Opciones:</strong> empleo por cuenta ajena, formación breve, trabajo temporal, autocandidatura o actividad por cuenta propia si es viable.</p>
+                    <p><strong class="text-white">Paso 7. Costes y riesgos:</strong> calcula transporte, horarios, ingresos netos y coste de formación.</p>
+                    <p><strong class="text-white">Paso 8. Primera acción:</strong> preparar una versión del currículum y enviar tres candidaturas adecuadas.</p>
+                    <p><strong class="text-white">Paso 9. Plazo:</strong> revisar resultados a los siete días.</p>
+                    <p><strong class="text-white">Paso 10. Evaluación:</strong> si no hay respuestas, revisar el perfil, las ofertas y la forma de presentar la experiencia.</p>
+                    <p><strong class="text-white">Paso 11. Apoyo:</strong> pedir contactos y orientación, sin depender de una sola persona.</p>
+                    <p class="!mb-0"><strong class="text-white">Paso 12. Esperanza:</strong> puede rezar si forma parte de su vida, pero no confunde la oración con una candidatura enviada.</p>
+                </div>
+
+                <h2 class="text-xl">13.3. Caso práctico B: problema económico</h2>
+                <div class="p-5 rounded-2xl bg-slate-900/80 border border-slate-800 space-y-2 text-sm sm:text-base">
+                    <p><strong class="text-cyan-300">Situación:</strong> una persona no puede cubrir todos sus gastos este mes.</p>
+                    <p><strong class="text-white">Paso 1. Definir:</strong> calcula exactamente cuánto falta y qué pagos vencen primero.</p>
+                    <p><strong class="text-white">Paso 2. Separar hechos:</strong> distingue deuda exigible, gastos esenciales y pagos aplazables.</p>
+                    <p><strong class="text-white">Paso 3. Control:</strong> puede revisar gastos, negociar plazos y pedir asesoramiento. No controla todos los ingresos futuros.</p>
+                    <p><strong class="text-white">Paso 4. Información:</strong> reúne contratos, recibos, intereses y fechas de vencimiento.</p>
+                    <p><strong class="text-white">Paso 5. Consulta:</strong> busca asesoramiento fiable, especialmente antes de firmar refinanciaciones o préstamos.</p>
+                    <p><strong class="text-white">Paso 6. Opciones:</strong> negociar, solicitar ayudas a las que tenga derecho, reorganizar gastos o acordar un calendario realista.</p>
+                    <p><strong class="text-white">Paso 7. Riesgos:</strong> evita créditos abusivos y promesas de dinero fácil.</p>
+                    <p><strong class="text-white">Paso 8. Primera acción:</strong> llamar al acreedor y pedir por escrito las opciones disponibles.</p>
+                    <p><strong class="text-white">Paso 9. Plazo:</strong> establecer una fecha para revisar la respuesta.</p>
+                    <p><strong class="text-white">Paso 10. Evaluación:</strong> comparar el coste total de cada alternativa.</p>
+                    <p><strong class="text-white">Paso 11. Apoyo:</strong> consultar servicios sociales, asociaciones de consumidores o asesoramiento financiero cualificado.</p>
+                    <p class="!mb-0"><strong class="text-white">Paso 12. Esperanza:</strong> conservar ánimo puede ayudar, pero no sustituye conocer las cifras ni negociar.</p>
+                </div>
+
+                <h2 class="text-xl">13.4. Caso práctico C: problema de salud</h2>
+                <div class="p-5 rounded-2xl bg-slate-900/80 border border-slate-800 space-y-2 text-sm sm:text-base">
+                    <p><strong class="text-cyan-300">Situación:</strong> una persona tiene síntomas persistentes y teme recibir un diagnóstico.</p>
+                    <p><strong class="text-white">Paso 1. Definir:</strong> registra síntomas, duración, intensidad y cambios relevantes.</p>
+                    <p><strong class="text-white">Paso 2. Separar hechos:</strong> distingue lo observado de las hipótesis que ha leído en internet.</p>
+                    <p><strong class="text-white">Paso 3. Control:</strong> puede solicitar atención, describir síntomas y seguir indicaciones. No puede diagnosticarse con certeza por intuición.</p>
+                    <p><strong class="text-white">Paso 4. Información:</strong> prepara preguntas y antecedentes para la consulta.</p>
+                    <p><strong class="text-white">Paso 5. Consulta:</strong> acude a un profesional sanitario. Si hay síntomas graves o urgentes, utiliza los servicios de urgencias correspondientes.</p>
+                    <p><strong class="text-white">Paso 6. Opciones:</strong> sigue la evaluación clínica y pregunta por beneficios, riesgos y alternativas de tratamiento.</p>
+                    <p><strong class="text-white">Paso 7. Riesgos:</strong> no abandona medicación ni retrasa pruebas indicadas por sustituirlas por rituales o promesas de curación.</p>
+                    <p><strong class="text-white">Paso 8. Primera acción:</strong> solicitar la cita o atención adecuada.</p>
+                    <p><strong class="text-white">Paso 9. Plazo:</strong> cumple el calendario clínico indicado.</p>
+                    <p><strong class="text-white">Paso 10. Evaluación:</strong> comunica cambios y efectos al profesional.</p>
+                    <p><strong class="text-white">Paso 11. Apoyo:</strong> pide ayuda para transporte, acompañamiento o tareas cotidianas si la necesita.</p>
+                    <p class="!mb-0"><strong class="text-white">Paso 12. Esperanza:</strong> puede rezar, meditar o recibir apoyo espiritual si le ayuda, pero esas prácticas acompañan y nunca reemplazan la evaluación ni el tratamiento médico indicado.</p>
+                </div>
+
+                <h2 class="text-xl">13.5. La regla de la acción verificable</h2>
+                <p>Un buen primer paso tiene tres características:</p>
+                <ul class="space-y-2 my-4 pl-5 list-disc text-slate-300">
+                    <li>Se puede describir con claridad.</li>
+                    <li>Depende al menos parcialmente de quien lo ejecuta.</li>
+                    <li>Permite comprobar si se realizó y qué ocurrió.</li>
+                </ul>
+                <p>«Voy a confiar en que todo mejorará» expresa una actitud. «Mañana llamaré al servicio de orientación y pediré una cita» es una acción verificable.</p>
+                <p class="!mb-0">No siempre podremos cambiar el resultado. Sí podemos mejorar la calidad de nuestras decisiones y evitar que la espera se disfrace de estrategia.</p>
+            </div>
+        </section>
+
+        <!-- ==========================================
+             PESTAÑA 14: Conclusión Adulta
+             ========================================== -->
+        <section class="tab-pane" data-tab-index="14" data-tab-title="Conclusión Adulta">
+            <div class="agency-card rounded-3xl p-5 sm:p-8 prose-custom">
+                <span class="text-xs font-bold uppercase tracking-widest text-cyan-400">Síntesis Final</span>
+                <h1 class="font-display text-2xl sm:text-3xl font-extrabold text-white mt-1 mb-4">
+                    Conclusión: una vida adulta frente a la incertidumbre
+                </h1>
+
+                <p>«El que madruga, Dios lo ayuda» puede leerse como una invitación a prepararse, aprovechar oportunidades y no dejarlo todo para mañana.</p>
+                <p>«Dios ayuda a quien se ayuda» puede leerse como un reconocimiento de que la iniciativa importa y que la pasividad no suele resolver los problemas.</p>
+                <p>Retiremos por un momento la explicación sobrenatural y observemos lo que permanece: la preparación, la constancia, el aprendizaje, la cooperación y la acción. Son capacidades humanas que pueden aumentar las posibilidades de alcanzar un objetivo. No garantizan el éxito. La suerte, las desigualdades, la salud, el contexto y las decisiones ajenas siguen influyendo.</p>
+                <p>La crítica no consiste en afirmar que quien cree es infantil, ni en sostener que toda oración paraliza. Hay personas creyentes que actúan con enorme lucidez, generosidad y valentía. También hay personas no religiosas que viven esperando soluciones mágicas, culpables imaginarios o golpes de suerte.</p>
+                <p>La cuestión central no es la etiqueta religiosa. Es la relación entre creencia y conducta.</p>
+                <p>Una creencia puede consolar sin ser una prueba. Una esperanza puede sostener sin convertirse en garantía. Una oración puede acompañar una decisión sin tomarla por nosotros. Una comunidad puede ofrecer ayuda real, y esa ayuda merece reconocimiento. Y una persona puede reconocer que no sabe si existe una intervención divina sin renunciar a pensar, actuar y cuidar de los demás.</p>
+                <p>La vida adulta no consiste en no necesitar a nadie. Consiste en no abandonar el juicio propio. Consiste en pedir ayuda cuando hace falta, aprender cuando se ignora, cambiar de estrategia cuando no funciona y aceptar que hay acontecimientos que no podemos controlar.</p>
+                <p>No tenemos que resolver todos los misterios del universo para decidir qué hacer hoy. Podemos reconocer nuestra incertidumbre metafísica y, al mismo tiempo, ser rigurosos con los problemas concretos.</p>
+                <p>La esperanza es valiosa cuando nos ayuda a seguir adelante. Se vuelve peligrosa cuando nos convence de que ya no hace falta dar el siguiente paso.</p>
+
+                <blockquote class="mt-6 p-5 sm:p-6 rounded-2xl bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-400/50 text-center font-display text-lg sm:text-2xl font-extrabold text-white shadow-lg">
+                    No esperes que el cielo haga el trabajo que todavía puedes empezar aquí abajo.
+                </blockquote>
+            </div>
+        </section>
+
+        <!-- ==========================================
+             PESTAÑA 15: 33 Preguntas y Respuestas (Con botones + Desplegar / - Plegar y Default Plegado)
+             ========================================== -->
+        <section class="tab-pane" data-tab-index="15" data-tab-title="33 Preguntas y Respuestas">
+            <div class="agency-card rounded-3xl p-5 sm:p-8">
+                <span class="text-xs font-bold uppercase tracking-widest text-cyan-400">Autoevaluación Crítica</span>
+                <h1 class="font-display text-2xl sm:text-3xl font-extrabold text-white mt-1 mb-3">
+                    33 PREGUNTAS Y RESPUESTAS
+                </h1>
+                <p class="text-slate-300 text-sm sm:text-base leading-relaxed mb-5">
+                    Las preguntas avanzan desde la comprensión básica de las frases hasta los dilemas epistemológicos y filosóficos. Algunas cuestionan también las tesis de este tutorial: pensar críticamente exige someter a examen nuestras propias conclusiones.
+                </p>
+
+                <!-- Botonera Obligatoria de Control de Respuestas (Default: "- Plegar todas las respuestas" activo / respuestas ocultas) -->
+                <div class="sticky top-[106px] z-30 bg-[#081026]/95 backdrop-blur-md p-3 rounded-2xl border border-cyan-500/30 shadow-xl mb-6 flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-2.5">
+                    <div class="flex items-center gap-2 text-xs text-cyan-300 font-medium px-1">
+                        <span id="qa-status-indicator" class="w-2.5 h-2.5 rounded-full bg-purple-400 animate-pulse"></span>
+                        <span id="qa-status-text">Estado actual: Respuestas plegadas (por defecto)</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <button id="btn-expand-all" onclick="toggleAllQA(true)" 
+                                class="flex-1 sm:flex-initial px-3.5 py-2.5 rounded-xl text-xs sm:text-sm font-display font-bold border transition bg-slate-900 text-cyan-300 border-cyan-500/40 hover:bg-cyan-500/20 active:scale-95">
+                            + Desplegar todas las respuestas
+                        </button>
+                        <button id="btn-collapse-all" onclick="toggleAllQA(false)" 
+                                class="flex-1 sm:flex-initial px-3.5 py-2.5 rounded-xl text-xs sm:text-sm font-display font-bold border transition bg-gradient-to-r from-cyan-500 to-blue-600 text-slate-950 border-cyan-300 shadow-lg shadow-cyan-500/20 active:scale-95">
+                            - Plegar todas las respuestas
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Contenedor de las 33 Preguntas y Respuestas divididas en sus 4 niveles -->
+                <div id="qa-accordion-container" class="space-y-6">
+                    <!-- Nivel 1 -->
+                    <div>
+                        <h2 class="font-display text-lg sm:text-xl font-bold text-cyan-300 mb-3 pb-2 border-b border-slate-800">
+                            Nivel 1 — Básico
+                        </h2>
+                        <div class="space-y-3" id="qa-level-1"></div>
+                    </div>
+                    <!-- Nivel 2 -->
+                    <div>
+                        <h2 class="font-display text-lg sm:text-xl font-bold text-cyan-300 mb-3 pb-2 border-b border-slate-800">
+                            Nivel 2 — Intermedio
+                        </h2>
+                        <div class="space-y-3" id="qa-level-2"></div>
+                    </div>
+                    <!-- Nivel 3 -->
+                    <div>
+                        <h2 class="font-display text-lg sm:text-xl font-bold text-cyan-300 mb-3 pb-2 border-b border-slate-800">
+                            Nivel 3 — Avanzado
+                        </h2>
+                        <div class="space-y-3" id="qa-level-3"></div>
+                    </div>
+                    <!-- Nivel 4 -->
+                    <div>
+                        <h2 class="font-display text-lg sm:text-xl font-bold text-cyan-300 mb-3 pb-2 border-b border-slate-800">
+                            Nivel 4 — Experto
+                        </h2>
+                        <div class="space-y-3" id="qa-level-4"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================
+             PESTAÑA 16: Glosario Filosófico
+             ========================================== -->
+        <section class="tab-pane" data-tab-index="16" data-tab-title="Glosario Filosófico">
+            <div class="agency-card rounded-3xl p-5 sm:p-8">
+                <span class="text-xs font-bold uppercase tracking-widest text-cyan-400">Conceptos Clave</span>
+                <h1 class="font-display text-2xl sm:text-3xl font-extrabold text-white mt-1 mb-4">
+                    GLOSARIO
+                </h1>
+
+                <!-- Buscador instantáneo de términos del glosario -->
+                <div class="mb-6">
+                    <label for="glossary-search" class="sr-only">Filtrar término del glosario</label>
+                    <div class="relative">
+                        <input id="glossary-search" type="text" oninput="filterGlossary(this.value)" 
+                               placeholder="Buscar concepto en el glosario (ej. Agnosticismo, Falsabilidad, Teodicea...)"
+                               class="w-full pl-11 pr-4 py-3 rounded-2xl bg-slate-900/90 border border-slate-700 focus:border-cyan-400 focus:outline-none text-sm text-white placeholder-slate-400">
+                        <svg class="w-5 h-5 text-cyan-400 absolute left-3.5 top-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+                        </svg>
+                    </div>
+                </div>
+
+                <div id="glossary-list" class="grid grid-cols-1 gap-3.5">
+                    <div class="glossary-item p-4 rounded-2xl bg-slate-900/75 border border-slate-800">
+                        <p class="text-sm sm:text-base text-slate-200 leading-relaxed"><strong class="text-cyan-300 font-display">Agnosticismo:</strong> posición según la cual el conocimiento sobre la existencia o naturaleza de Dios no está disponible, no se ha alcanzado o no puede establecerse con suficiente fundamento. En este tutorial designa la posición declarada por el autor.</p>
+                    </div>
+                    <div class="glossary-item p-4 rounded-2xl bg-slate-900/75 border border-slate-800">
+                        <p class="text-sm sm:text-base text-slate-200 leading-relaxed"><strong class="text-cyan-300 font-display">Albedrío:</strong> capacidad de elegir o decidir. La expresión «libre albedrío» se refiere a la libertad humana para tomar decisiones, aunque su definición filosófica es discutida.</p>
+                    </div>
+                    <div class="glossary-item p-4 rounded-2xl bg-slate-900/75 border border-slate-800">
+                        <p class="text-sm sm:text-base text-slate-200 leading-relaxed"><strong class="text-cyan-300 font-display">Atribución causal:</strong> proceso por el que explicamos por qué ocurrió algo. Ejemplo: atribuir un empleo a la experiencia, a una recomendación, a la suerte o a una intervención divina.</p>
+                    </div>
+                    <div class="glossary-item p-4 rounded-2xl bg-slate-900/75 border border-slate-800">
+                        <p class="text-sm sm:text-base text-slate-200 leading-relaxed"><strong class="text-cyan-300 font-display">Ateísmo:</strong> ausencia de creencia en dioses o, según algunos usos, afirmación de que no existen. El término puede tener definiciones diferentes según el contexto.</p>
+                    </div>
+                    <div class="glossary-item p-4 rounded-2xl bg-slate-900/75 border border-slate-800">
+                        <p class="text-sm sm:text-base text-slate-200 leading-relaxed"><strong class="text-cyan-300 font-display">Autonomía:</strong> capacidad de deliberar y participar responsablemente en las propias decisiones. No significa autosuficiencia absoluta.</p>
+                    </div>
+                    <div class="glossary-item p-4 rounded-2xl bg-slate-900/75 border border-slate-800">
+                        <p class="text-sm sm:text-base text-slate-200 leading-relaxed"><strong class="text-cyan-300 font-display">Azar:</strong> conjunto de resultados que no controlamos o no podemos predecir con precisión. No siempre significa ausencia de causas.</p>
+                    </div>
+                    <div class="glossary-item p-4 rounded-2xl bg-slate-900/75 border border-slate-800">
+                        <p class="text-sm sm:text-base text-slate-200 leading-relaxed"><strong class="text-cyan-300 font-display">Carga de la prueba:</strong> responsabilidad de aportar razones y evidencia para sostener una afirmación.</p>
+                    </div>
+                    <div class="glossary-item p-4 rounded-2xl bg-slate-900/75 border border-slate-800">
+                        <p class="text-sm sm:text-base text-slate-200 leading-relaxed"><strong class="text-cyan-300 font-display">Causalidad:</strong> relación por la que un acontecimiento o factor contribuye a producir otro.</p>
+                    </div>
+                    <div class="glossary-item p-4 rounded-2xl bg-slate-900/75 border border-slate-800">
+                        <p class="text-sm sm:text-base text-slate-200 leading-relaxed"><strong class="text-cyan-300 font-display">Ciencia:</strong> conjunto organizado de conocimientos obtenidos mediante métodos sistemáticos de observación, razonamiento, contraste y revisión.</p>
+                    </div>
+                    <div class="glossary-item p-4 rounded-2xl bg-slate-900/75 border border-slate-800">
+                        <p class="text-sm sm:text-base text-slate-200 leading-relaxed"><strong class="text-cyan-300 font-display">Coincidencia:</strong> ocurrencia conjunta de acontecimientos sin que eso demuestre que uno haya causado el otro.</p>
+                    </div>
+                    <div class="glossary-item p-4 rounded-2xl bg-slate-900/75 border border-slate-800">
+                        <p class="text-sm sm:text-base text-slate-200 leading-relaxed"><strong class="text-cyan-300 font-display">Correlación:</strong> relación estadística en la que dos variables cambian de manera asociada. No demuestra por sí sola que una cause la otra.</p>
+                    </div>
+                    <div class="glossary-item p-4 rounded-2xl bg-slate-900/75 border border-slate-800">
+                        <p class="text-sm sm:text-base text-slate-200 leading-relaxed"><strong class="text-cyan-300 font-display">Coste de oportunidad:</strong> valor de la mejor alternativa a la que se renuncia al elegir una opción. En el tutorial, incluye las oportunidades perdidas mientras se espera sin actuar.</p>
+                    </div>
+                    <div class="glossary-item p-4 rounded-2xl bg-slate-900/75 border border-slate-800">
+                        <p class="text-sm sm:text-base text-slate-200 leading-relaxed"><strong class="text-cyan-300 font-display">Creencia:</strong> aceptación de una idea o proposición como verdadera, o confianza en ella.</p>
+                    </div>
+                    <div class="glossary-item p-4 rounded-2xl bg-slate-900/75 border border-slate-800">
+                        <p class="text-sm sm:text-base text-slate-200 leading-relaxed"><strong class="text-cyan-300 font-display">Determinismo:</strong> posición filosófica según la cual los acontecimientos están determinados por condiciones y causas anteriores. No equivale necesariamente a fatalismo.</p>
+                    </div>
+                    <div class="glossary-item p-4 rounded-2xl bg-slate-900/75 border border-slate-800">
+                        <p class="text-sm sm:text-base text-slate-200 leading-relaxed"><strong class="text-cyan-300 font-display">Disonancia cognitiva:</strong> incomodidad psicológica que surge cuando una creencia, una conducta o dos ideas entran en conflicto.</p>
+                    </div>
+                    <div class="glossary-item p-4 rounded-2xl bg-slate-900/75 border border-slate-800">
+                        <p class="text-sm sm:text-base text-slate-200 leading-relaxed"><strong class="text-cyan-300 font-display">Efecto placebo:</strong> cambio en la experiencia o respuesta de una persona asociado, en parte, a expectativas y al contexto de una intervención. No significa que cualquier enfermedad pueda curarse mediante sugestión.</p>
+                    </div>
+                    <div class="glossary-item p-4 rounded-2xl bg-slate-900/75 border border-slate-800">
+                        <p class="text-sm sm:text-base text-slate-200 leading-relaxed"><strong class="text-cyan-300 font-display">Empírico / evidencia empírica:</strong> relativo a la observación o experiencia. La evidencia empírica procede de datos observables obtenidos mediante métodos adecuados.</p>
+                    </div>
+                    <div class="glossary-item p-4 rounded-2xl bg-slate-900/75 border border-slate-800">
+                        <p class="text-sm sm:text-base text-slate-200 leading-relaxed"><strong class="text-cyan-300 font-display">Epistemología:</strong> rama de la filosofía que estudia el conocimiento: qué significa saber, cómo se justifica una creencia y cuáles son los límites de lo que podemos conocer.</p>
+                    </div>
+                    <div class="glossary-item p-4 rounded-2xl bg-slate-900/75 border border-slate-800">
+                        <p class="text-sm sm:text-base text-slate-200 leading-relaxed"><strong class="text-cyan-300 font-display">Falsabilidad:</strong> posibilidad de especificar qué observación podría entrar en conflicto con una afirmación. Es un criterio importante para evaluar hipótesis empíricas.</p>
+                    </div>
+                    <div class="glossary-item p-4 rounded-2xl bg-slate-900/75 border border-slate-800">
+                        <p class="text-sm sm:text-base text-slate-200 leading-relaxed"><strong class="text-cyan-300 font-display">Fatalismo:</strong> idea de que los acontecimientos están fijados de antemano y que las acciones personales no pueden cambiar el resultado.</p>
+                    </div>
+                    <div class="glossary-item p-4 rounded-2xl bg-slate-900/75 border border-slate-800">
+                        <p class="text-sm sm:text-base text-slate-200 leading-relaxed"><strong class="text-cyan-300 font-display">Hipótesis:</strong> explicación o proposición provisional que puede examinarse mediante argumentos, observaciones o pruebas apropiadas.</p>
+                    </div>
+                    <div class="glossary-item p-4 rounded-2xl bg-slate-900/75 border border-slate-800">
+                        <p class="text-sm sm:text-base text-slate-200 leading-relaxed"><strong class="text-cyan-300 font-display">Humildad epistémica:</strong> reconocimiento de los límites del propio conocimiento y disposición a revisar las propias conclusiones.</p>
+                    </div>
+                    <div class="glossary-item p-4 rounded-2xl bg-slate-900/75 border border-slate-800">
+                        <p class="text-sm sm:text-base text-slate-200 leading-relaxed"><strong class="text-cyan-300 font-display">Ilusión de control:</strong> tendencia a sobreestimar la influencia propia sobre resultados que dependen del azar o de factores externos.</p>
+                    </div>
+                    <div class="glossary-item p-4 rounded-2xl bg-slate-900/75 border border-slate-800">
+                        <p class="text-sm sm:text-base text-slate-200 leading-relaxed"><strong class="text-cyan-300 font-display">Intercesión / oración intercesora:</strong> petición dirigida a una divinidad en favor de otra persona o grupo.</p>
+                    </div>
+                    <div class="glossary-item p-4 rounded-2xl bg-slate-900/75 border border-slate-800">
+                        <p class="text-sm sm:text-base text-slate-200 leading-relaxed"><strong class="text-cyan-300 font-display">Metafísica:</strong> rama de la filosofía que estudia cuestiones fundamentales sobre la realidad, la existencia, la identidad, el tiempo, la causalidad y otros asuntos que no siempre pueden resolverse mediante experimentos.</p>
+                    </div>
+                    <div class="glossary-item p-4 rounded-2xl bg-slate-900/75 border border-slate-800">
+                        <p class="text-sm sm:text-base text-slate-200 leading-relaxed"><strong class="text-cyan-300 font-display">Necesidad de cierre cognitivo:</strong> deseo de obtener una respuesta clara y definitiva, reduciendo la ambigüedad o la incertidumbre.</p>
+                    </div>
+                    <div class="glossary-item p-4 rounded-2xl bg-slate-900/75 border border-slate-800">
+                        <p class="text-sm sm:text-base text-slate-200 leading-relaxed"><strong class="text-cyan-300 font-display">Omnipotencia:</strong> atributo que, en ciertas concepciones religiosas, significa poder máximo o ilimitado. Su definición exacta varía entre tradiciones y filósofos.</p>
+                    </div>
+                    <div class="glossary-item p-4 rounded-2xl bg-slate-900/75 border border-slate-800">
+                        <p class="text-sm sm:text-base text-slate-200 leading-relaxed"><strong class="text-cyan-300 font-display">Omnisciencia:</strong> atributo que significa conocimiento de todo lo que puede ser conocido, según la definición teológica adoptada.</p>
+                    </div>
+                    <div class="glossary-item p-4 rounded-2xl bg-slate-900/75 border border-slate-800">
+                        <p class="text-sm sm:text-base text-slate-200 leading-relaxed"><strong class="text-cyan-300 font-display">Pensamiento mágico:</strong> atribución de una relación causal entre pensamientos, palabras, rituales o acciones y acontecimientos sin evidencia suficiente de que exista esa relación.</p>
+                    </div>
+                    <div class="glossary-item p-4 rounded-2xl bg-slate-900/75 border border-slate-800">
+                        <p class="text-sm sm:text-base text-slate-200 leading-relaxed"><strong class="text-cyan-300 font-display">Problema del mal:</strong> dificultad filosófica que surge al combinar la existencia del sufrimiento y el mal con la idea de un Dios omnipotente, omnisciente y perfectamente bueno.</p>
+                    </div>
+                    <div class="glossary-item p-4 rounded-2xl bg-slate-900/75 border border-slate-800">
+                        <p class="text-sm sm:text-base text-slate-200 leading-relaxed"><strong class="text-cyan-300 font-display">Razonamiento motivado:</strong> forma de razonar en la que deseos, intereses o necesidades influyen en la manera de evaluar información y argumentos.</p>
+                    </div>
+                    <div class="glossary-item p-4 rounded-2xl bg-slate-900/75 border border-slate-800">
+                        <p class="text-sm sm:text-base text-slate-200 leading-relaxed"><strong class="text-cyan-300 font-display">Religión:</strong> conjunto diverso de creencias, prácticas, relatos, instituciones, normas y comunidades relacionadas con lo sagrado o lo trascendente. No todas las religiones comparten la misma idea de Dios.</p>
+                    </div>
+                    <div class="glossary-item p-4 rounded-2xl bg-slate-900/75 border border-slate-800">
+                        <p class="text-sm sm:text-base text-slate-200 leading-relaxed"><strong class="text-cyan-300 font-display">Sesgo de confirmación:</strong> tendencia a buscar o interpretar información de modo favorable a las creencias o hipótesis que ya se tienen.</p>
+                    </div>
+                    <div class="glossary-item p-4 rounded-2xl bg-slate-900/75 border border-slate-800">
+                        <p class="text-sm sm:text-base text-slate-200 leading-relaxed"><strong class="text-cyan-300 font-display">Sesgo de selección:</strong> distorsión que aparece cuando los casos observados no representan adecuadamente el conjunto del que proceden.</p>
+                    </div>
+                    <div class="glossary-item p-4 rounded-2xl bg-slate-900/75 border border-slate-800">
+                        <p class="text-sm sm:text-base text-slate-200 leading-relaxed"><strong class="text-cyan-300 font-display">Sesgo retrospectivo:</strong> tendencia a creer, después de conocer un resultado, que era más previsible de lo que realmente parecía antes.</p>
+                    </div>
+                    <div class="glossary-item p-4 rounded-2xl bg-slate-900/75 border border-slate-800">
+                        <p class="text-sm sm:text-base text-slate-200 leading-relaxed"><strong class="text-cyan-300 font-display">Teísmo:</strong> creencia en la existencia de una o más divinidades. En algunas discusiones se refiere específicamente a un Dios personal.</p>
+                    </div>
+                    <div class="glossary-item p-4 rounded-2xl bg-slate-900/75 border border-slate-800">
+                        <p class="text-sm sm:text-base text-slate-200 leading-relaxed"><strong class="text-cyan-300 font-display">Teodicea:</strong> intento filosófico o teológico de explicar cómo puede existir el mal o el sufrimiento en un mundo creado o gobernado por un Dios perfectamente bueno y poderoso.</p>
+                    </div>
+                    <div class="glossary-item p-4 rounded-2xl bg-slate-900/75 border border-slate-800">
+                        <p class="text-sm sm:text-base text-slate-200 leading-relaxed"><strong class="text-cyan-300 font-display">Trascendencia:</strong> aquello que se considera que va más allá de la experiencia ordinaria o de los límites del mundo material, según el marco filosófico o religioso utilizado.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================
+             PESTAÑA 17: Fuentes y Referencias (Todos los enlaces URL con botón "Abrir en otra Ventana")
+             ========================================== -->
+        <section class="tab-pane" data-tab-index="17" data-tab-title="Fuentes y Referencias">
+            <div class="agency-card rounded-3xl p-5 sm:p-8 prose-custom">
+                <span class="text-xs font-bold uppercase tracking-widest text-cyan-400">Bibliografía Académica</span>
+                <h1 class="font-display text-2xl sm:text-3xl font-extrabold text-white mt-1 mb-4">
+                    FUENTES Y REFERENCIAS
+                </h1>
+                <p>Las siguientes referencias respaldan afirmaciones concretas del tutorial. No demuestran ni refutan por sí solas la existencia de Dios. Se distingue entre investigación empírica, revisión psicológica y análisis filosófico.</p>
+
+                <div class="space-y-4 my-6">
+                    <!-- Referencia 1 -->
+                    <div class="p-5 rounded-2xl bg-slate-900/80 border border-slate-800">
+                        <p class="!mb-2 text-slate-200">
+                            <strong class="text-white">1. Benson, Herbert y colaboradores (2006).</strong> “Study of the Therapeutic Effects of Intercessory Prayer (STEP) in cardiac bypass patients: a multicenter randomized trial of uncertainty and certainty of receiving intercessory prayer”. <em>American Heart Journal</em>, 151(4), 934–942. DOI: <span class="text-cyan-300 font-mono text-sm">10.1016/j.ahj.2005.05.028</span>.
+                        </p>
+                        <div class="flex flex-wrap items-center gap-2 my-3">
+                            <a href="https://doi.org/10.1016/j.ahj.2005.05.028" target="_blank" rel="noopener noreferrer"
+                               onclick="window.open(this.href, '_blank', 'noopener,noreferrer'); return false;"
+                               class="inline-flex items-center gap-2 px-3.5 py-2 rounded-xl bg-cyan-500/20 hover:bg-cyan-500/30 border border-cyan-400/50 text-cyan-200 font-display font-bold text-xs transition shadow-sm">
+                                <span>DOI: 10.1016/j.ahj.2005.05.028 · Abrir en otra Ventana</span>
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+                            </a>
+                            <a href="https://pubmed.ncbi.nlm.nih.gov/16569567/" target="_blank" rel="noopener noreferrer"
+                               onclick="window.open(this.href, '_blank', 'noopener,noreferrer'); return false;"
+                               class="inline-flex items-center gap-2 px-3.5 py-2 rounded-xl bg-purple-500/20 hover:bg-purple-500/30 border border-purple-400/50 text-purple-200 font-display font-bold text-xs transition shadow-sm">
+                                <span>PubMed · Abrir en otra Ventana</span>
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+                            </a>
+                        </div>
+                        <p class="!mb-0 text-sm text-slate-300"><strong class="text-cyan-300">Utilidad:</strong> ensayo clínico aleatorizado sobre oración intercesora y recuperación tras cirugía de bypass. Sus conclusiones se limitan a la población, el protocolo y los resultados estudiados. Resumen bibliográfico: PubMed.</p>
+                    </div>
+
+                    <!-- Referencia 2 -->
+                    <div class="p-5 rounded-2xl bg-slate-900/80 border border-slate-800">
+                        <p class="!mb-2 text-slate-200">
+                            <strong class="text-white">2. Nickerson, Raymond S. (1998).</strong> “Confirmation Bias: A Ubiquitous Phenomenon in Many Guises”. <em>Review of General Psychology</em>, 2(2), 175–220. DOI: <span class="text-cyan-300 font-mono text-sm">10.1037/1089-2680.2.2.175</span>.
+                        </p>
+                        <div class="my-3">
+                            <a href="https://doi.org/10.1037/1089-2680.2.2.175" target="_blank" rel="noopener noreferrer"
+                               onclick="window.open(this.href, '_blank', 'noopener,noreferrer'); return false;"
+                               class="inline-flex items-center gap-2 px-3.5 py-2 rounded-xl bg-cyan-500/20 hover:bg-cyan-500/30 border border-cyan-400/50 text-cyan-200 font-display font-bold text-xs transition shadow-sm">
+                                <span>DOI: 10.1037/1089-2680.2.2.175 · Abrir en otra Ventana</span>
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+                            </a>
+                        </div>
+                        <p class="!mb-0 text-sm text-slate-300"><strong class="text-cyan-300">Utilidad:</strong> revisión del sesgo de confirmación y de las distintas formas en que las personas seleccionan o interpretan evidencia favorable a sus creencias.</p>
+                    </div>
+
+                    <!-- Referencia 3 -->
+                    <div class="p-5 rounded-2xl bg-slate-900/80 border border-slate-800">
+                        <p class="!mb-2 text-slate-200">
+                            <strong class="text-white">3. Ano, Gene G. y Vasconcelles, Erin B. (2005).</strong> “Religious coping and psychological adjustment to stress: A meta-analysis”. <em>Journal of Clinical Psychology</em>, 61(4), 461–480. DOI: <span class="text-cyan-300 font-mono text-sm">10.1002/jclp.20049</span>.
+                        </p>
+                        <div class="my-3">
+                            <a href="https://doi.org/10.1002/jclp.20049" target="_blank" rel="noopener noreferrer"
+                               onclick="window.open(this.href, '_blank', 'noopener,noreferrer'); return false;"
+                               class="inline-flex items-center gap-2 px-3.5 py-2 rounded-xl bg-cyan-500/20 hover:bg-cyan-500/30 border border-cyan-400/50 text-cyan-200 font-display font-bold text-xs transition shadow-sm">
+                                <span>DOI: 10.1002/jclp.20049 · Abrir en otra Ventana</span>
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+                            </a>
+                        </div>
+                        <p class="!mb-0 text-sm text-slate-300"><strong class="text-cyan-300">Utilidad:</strong> metaanálisis de investigaciones sobre afrontamiento religioso y adaptación psicológica al estrés. Sus resultados indican relaciones diferentes según se trate de formas positivas o negativas de afrontamiento religioso; no autorizan a afirmar que toda religiosidad tenga el mismo efecto.</p>
+                    </div>
+
+                    <!-- Referencia 4 -->
+                    <div class="p-5 rounded-2xl bg-slate-900/80 border border-slate-800">
+                        <p class="!mb-2 text-slate-200">
+                            <strong class="text-white">4. Pargament, Kenneth I. (2012).</strong> “Religion and Coping: The Current State of Knowledge”. En <em>The Oxford Handbook of Stress, Health, and Coping</em>, pp. 269–288. Oxford University Press. DOI: <span class="text-cyan-300 font-mono text-sm">10.1093/oxfordhb/9780195375343.013.0014</span>.
+                        </p>
+                        <div class="my-3">
+                            <a href="https://doi.org/10.1093/oxfordhb/9780195375343.013.0014" target="_blank" rel="noopener noreferrer"
+                               onclick="window.open(this.href, '_blank', 'noopener,noreferrer'); return false;"
+                               class="inline-flex items-center gap-2 px-3.5 py-2 rounded-xl bg-cyan-500/20 hover:bg-cyan-500/30 border border-cyan-400/50 text-cyan-200 font-display font-bold text-xs transition shadow-sm">
+                                <span>DOI: 10.1093/oxfordhb/9780195375343.013.0014 · Abrir en otra Ventana</span>
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+                            </a>
+                        </div>
+                        <p class="!mb-0 text-sm text-slate-300"><strong class="text-cyan-300">Utilidad:</strong> revisión del papel de la religión en el afrontamiento de situaciones difíciles. Explica que la religión puede ayudar o perjudicar dependiendo de la forma de afrontamiento y del contexto.</p>
+                    </div>
+
+                    <!-- Referencia 5 -->
+                    <div class="p-5 rounded-2xl bg-slate-900/80 border border-slate-800">
+                        <p class="!mb-2 text-slate-200">
+                            <strong class="text-white">5. McBrayer, Justin P. y Howard-Snyder, Daniel (eds.).</strong> “The Problem of Evil”. <em>Stanford Encyclopedia of Philosophy</em>. <span class="text-cyan-300 font-mono text-xs break-all">https://plato.stanford.edu/entries/evil/</span>.
+                        </p>
+                        <div class="my-3">
+                            <a href="https://plato.stanford.edu/entries/evil/" target="_blank" rel="noopener noreferrer"
+                               onclick="window.open(this.href, '_blank', 'noopener,noreferrer'); return false;"
+                               class="inline-flex items-center gap-2 px-3.5 py-2 rounded-xl bg-cyan-500/20 hover:bg-cyan-500/30 border border-cyan-400/50 text-cyan-200 font-display font-bold text-xs transition shadow-sm">
+                                <span>plato.stanford.edu/entries/evil/ · Abrir en otra Ventana</span>
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+                            </a>
+                        </div>
+                        <p class="!mb-0 text-sm text-slate-300"><strong class="text-cyan-300">Utilidad:</strong> exposición académica de las formulaciones del problema del mal, las defensas basadas en el libre albedrío y distintas teodiceas. Es una referencia de consulta filosófica; la entrada ha tenido revisiones editoriales a lo largo del tiempo.</p>
+                    </div>
+
+                    <!-- Referencia 6 -->
+                    <div class="p-5 rounded-2xl bg-slate-900/80 border border-slate-800">
+                        <p class="!mb-2 text-slate-200">
+                            <strong class="text-white">6. Popper, Karl R. (1959).</strong> <em>The Logic of Scientific Discovery</em>. Hutchinson.
+                        </p>
+                        <p class="!mb-0 text-sm text-slate-300"><strong class="text-cyan-300">Utilidad:</strong> obra fundamental para comprender la falsabilidad y la demarcación de las teorías científicas. La falsabilidad se utiliza aquí con cautela: no se afirma que todas las proposiciones filosóicas o religiosas deban funcionar como hipótesis experimentales.</p>
+                    </div>
+
+                    <!-- Referencia 7 -->
+                    <div class="p-5 rounded-2xl bg-slate-900/80 border border-slate-800">
+                        <p class="!mb-2 text-slate-200">
+                            <strong class="text-white">7. Hick, John (1966).</strong> <em>Evil and the God of Love</em>. Macmillan.
+                        </p>
+                        <p class="!mb-0 text-sm text-slate-300"><strong class="text-cyan-300">Utilidad:</strong> formulación influyente de la teodicea de la formación del alma. Se presenta como una respuesta teísta al problema del sufrimiento, junto con sus objeciones.</p>
+                    </div>
+
+                    <!-- Referencia 8 -->
+                    <div class="p-5 rounded-2xl bg-slate-900/80 border border-slate-800">
+                        <p class="!mb-2 text-slate-200">
+                            <strong class="text-white">8. Stanford Encyclopedia of Philosophy.</strong> “The Problem of Evil”, especialmente sus apartados sobre defensa del libre albedrío y teodicea de la formación del alma. <span class="text-cyan-300 font-mono text-xs break-all">https://plato.stanford.edu/entries/evil/</span>.
+                        </p>
+                        <div class="my-3">
+                            <a href="https://plato.stanford.edu/entries/evil/" target="_blank" rel="noopener noreferrer"
+                               onclick="window.open(this.href, '_blank', 'noopener,noreferrer'); return false;"
+                               class="inline-flex items-center gap-2 px-3.5 py-2 rounded-xl bg-cyan-500/20 hover:bg-cyan-500/30 border border-cyan-400/50 text-cyan-200 font-display font-bold text-xs transition shadow-sm">
+                                <span>plato.stanford.edu/entries/evil/ · Abrir en otra Ventana</span>
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+                            </a>
+                        </div>
+                        <p class="!mb-0 text-sm text-slate-300"><strong class="text-cyan-300">Utilidad:</strong> permite comparar respuestas teístas y objeciones filosóficas sin reducir el debate a una caricatura.</p>
+                    </div>
+                </div>
+
+                <div class="p-4 sm:p-5 rounded-2xl bg-cyan-500/10 border border-cyan-400/40 text-sm text-cyan-100">
+                    <strong class="text-cyan-300">Nota de rigor:</strong> los estudios psicológicos y médicos citados no permiten diagnosticar a una persona creyente ni generalizar a todas las religiones. Las asociaciones estadísticas no prueban automáticamente causalidad. Las fuentes filosóficas presentan argumentos y debates, no resultados experimentales que resuelvan cuestiones metafísicas.
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================
+             PESTAÑA 18: CRÉDITOS
+             ========================================== -->
+        <section class="tab-pane" data-tab-index="18" data-tab-title="CRÉDITOS">
+            <div class="agency-card-highlight rounded-3xl p-6 sm:p-10 text-center relative overflow-hidden">
+                <div class="w-24 h-24 mx-auto mb-5 rounded-3xl bg-[#050b1a] border-2 border-cyan-400/60 flex items-center justify-center p-2 shadow-xl shadow-cyan-500/20">
+                    <svg class="w-full h-full"><use href="#logo-ia-tutoriales"></use></svg>
+                </div>
+
+                <span class="inline-block text-xs font-bold uppercase tracking-widest px-3.5 py-1 rounded-full bg-cyan-500/20 text-cyan-300 border border-cyan-400/40 mb-3">
+                    Ficha Oficial de Autoría
+                </span>
+
+                <h1 class="font-display text-3xl sm:text-4xl font-extrabold text-white mb-6">
+                    CRÉDITOS
+                </h1>
+
+                <div class="max-w-md mx-auto grid grid-cols-1 gap-4 text-left">
+                    <div class="p-4 rounded-2xl bg-slate-900/90 border border-cyan-500/30 flex items-center justify-between">
+                        <span class="text-xs uppercase tracking-wider text-slate-400 font-bold">AUTOR</span>
+                        <span class="font-display font-extrabold text-lg text-white">Rubén Sbarsky</span>
+                    </div>
+                    <div class="p-4 rounded-2xl bg-slate-900/90 border border-cyan-500/30 flex items-center justify-between">
+                        <span class="text-xs uppercase tracking-wider text-slate-400 font-bold">Fecha 📆</span>
+                        <span class="font-mono font-bold text-base sm:text-lg text-cyan-300">18/11/2026</span>
+                    </div>
+                    <div class="p-4 rounded-2xl bg-slate-900/90 border border-cyan-500/30 flex items-center justify-between">
+                        <span class="text-xs uppercase tracking-wider text-slate-400 font-bold">Hora 🕰</span>
+                        <span class="font-mono font-bold text-base sm:text-lg text-purple-300">08:15:51</span>
+                    </div>
+                </div>
+
+                <p class="mt-6 text-xs text-slate-400">
+                    Registro original del documento fuente: AUTOR: Rubén Sbarsky · FECHA 📆: 18/11/2026 · HORA 🕰: 08:15:51 (08:25:22 en archivo adjunto).
+                </p>
+            </div>
+        </section>
+
+        <!-- NAVEGACIÓN INFERIOR FIJA AL FINAL DE CADA PESTAÑA (Anterior / Siguiente) -->
+        <div id="bottom-tab-nav" class="mt-7 agency-card rounded-2xl p-3.5 sm:p-4 flex items-center justify-between gap-3 border border-cyan-500/30">
+            <button id="prev-tab-btn" onclick="navigateRelative(-1)" 
+                    class="flex-1 py-3 px-4 rounded-xl bg-slate-900 hover:bg-slate-800 border border-slate-700 hover:border-cyan-400/50 text-left transition flex items-center gap-2.5 group">
+                <svg class="w-5 h-5 text-cyan-400 flex-shrink-0 group-hover:-translate-x-1 transition-transform" fill="none" stroke="currentColor" stroke-width="2.4" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"/>
+                </svg>
+                <div class="overflow-hidden">
+                    <span class="block text-[10px] uppercase tracking-wider text-slate-400">Pestaña Anterior</span>
+                    <span id="prev-tab-label" class="block font-display font-bold text-xs sm:text-sm text-white truncate">Inicio</span>
+                </div>
+            </button>
+
+            <button id="next-tab-btn" onclick="navigateRelative(1)" 
+                    class="flex-1 py-3 px-4 rounded-xl bg-gradient-to-r from-cyan-500/20 to-purple-500/25 hover:from-cyan-500/30 hover:to-purple-500/35 border border-cyan-400/50 text-right transition flex items-center justify-end gap-2.5 group">
+                <div class="overflow-hidden">
+                    <span class="block text-[10px] uppercase tracking-wider text-cyan-300">Próxima Pestaña</span>
+                    <span id="next-tab-label" class="block font-display font-bold text-xs sm:text-sm text-white truncate">Provocación Filosófica</span>
+                </div>
+                <svg class="w-5 h-5 text-cyan-300 flex-shrink-0 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" stroke-width="2.4" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/>
+                </svg>
+            </button>
+        </div>
+
+    </main>
+
+    <!-- BOTONES FLOTANTES MOVIBLES (ARRASTRABLES CON DEDO O RATÓN) -->
+    <!-- 1. Botón Flotante Movible: Ir a INICIO desde cualquier lugar -->
+    <button id="fab-inicio" title="Arrastrar o tocar para ir a INICIO"
+            style="bottom: 18px; left: 14px;"
+            class="draggable-fab fixed z-40 flex items-center gap-1.5 px-3.5 py-2.5 rounded-full bg-gradient-to-r from-cyan-500 to-blue-600 text-slate-950 font-display font-extrabold text-xs shadow-lg shadow-cyan-500/30 border-2 border-white/30">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/>
+        </svg>
+        <span>INICIO</span>
+    </button>
+
+    <!-- 2. Botón Flotante Movible: ARRIBA (Comienzo de la pestaña actual) -->
+    <button id="fab-arriba" title="Arrastrar o tocar para subir al comienzo de la pestaña actual"
+            style="bottom: 18px; right: 14px;"
+            class="draggable-fab fixed z-40 flex items-center gap-1.5 px-3.5 py-2.5 rounded-full bg-gradient-to-r from-purple-600 to-indigo-600 text-white font-display font-extrabold text-xs shadow-lg shadow-purple-500/30 border-2 border-white/30">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.6" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M5 10l7-7m0 0l7 7m-7-7v18"/>
+        </svg>
+        <span>ARRIBA</span>
+    </button>
+
+    <!-- JAVASCRIPT: LÓGICA DE PESTAÑAS, AUTO-CENTRADO, MENÚ SÁNDWICH, 33 Q&A Y BOTONES FLOTANTES ARRASTRABLES -->
+    <script>
+        // 1. Datos de las 33 Preguntas y Respuestas (100% fieles al archivo adjunto)
+        const qaData = [
+            // Nivel 1 — Básico (1 a 8)
+            {
+                level: 1,
+                num: 1,
+                q: "¿Qué significa «El Dios que sirve»?",
+                a: "Es una expresión provocadora que examina la expectativa de que Dios esté disponible para resolver necesidades humanas concretas. No describe todas las religiones ni afirma que Dios exista. Señala una forma instrumental de religiosidad en la que la divinidad parece funcionar como proveedor de protección, favores o soluciones."
+            },
+            {
+                level: 1,
+                num: 2,
+                q: "¿El tutorial afirma que Dios no existe?",
+                a: "No. El autor se define como agnóstico y no presenta la inexistencia de Dios como un hecho demostrado. El objetivo es examinar críticamente las afirmaciones sobre intervención divina y sus consecuencias prácticas, reconociendo los límites del conocimiento humano."
+            },
+            {
+                level: 1,
+                num: 3,
+                q: "¿Madrugar garantiza el éxito?",
+                a: "No. Levantarse temprano puede facilitar ciertas actividades, pero el éxito depende de muchos factores: preparación, salud, oportunidades, recursos, contexto y azar. Un horario no es una garantía universal ni una medida del valor moral de una persona."
+            },
+            {
+                level: 1,
+                num: 4,
+                q: "¿Qué tiene de útil «Dios ayuda a quien se ayuda»?",
+                a: "Puede expresar una recomendación sensata: tomar iniciativa, prepararse y no esperar pasivamente. Su parte práctica puede conservarse aunque no se acepte que una divinidad intervenga causalmente en el resultado."
+            },
+            {
+                level: 1,
+                num: 5,
+                q: "¿Rezar es necesariamente una forma de pasividad?",
+                a: "No. Una persona puede rezar y actuar con decisión. La oración puede servir de consuelo, reflexión o práctica comunitaria. El problema aparece cuando reemplaza acciones necesarias, como buscar empleo, consultar a un médico o negociar una deuda."
+            },
+            {
+                level: 1,
+                num: 6,
+                q: "¿Pedir ayuda a otras personas contradice la autonomía?",
+                a: "No. La autonomía no significa autosuficiencia absoluta. Pedir apoyo a un profesional, un familiar o una institución puede ser decisión responsable. La autonomía consiste en participar conscientemente en las decisiones, no en hacerlo todo en soledad."
+            },
+            {
+                level: 1,
+                num: 7,
+                q: "¿Que una creencia consuele demuestra que es verdadera?",
+                a: "No. El consuelo es un efecto emocional o existencial; la verdad factual es otra cuestión. Una creencia puede ayudar a alguien sin que ese beneficio demuestre que su explicación sobrenatural describe correctamente la realidad."
+            },
+            {
+                level: 1,
+                num: 8,
+                q: "¿El esfuerzo garantiza que una persona consiga lo que busca?",
+                a: "No. El esfuerzo puede aumentar las posibilidades, pero no elimina las desigualdades, la enfermedad, la mala suerte ni las decisiones de otras personas. Decir que todo fracaso demuestra falta de esfuerzo es una forma injusta de culpabilizar a quien sufre."
+            },
+            // Nivel 2 — Intermedio (9 a 17)
+            {
+                level: 2,
+                num: 9,
+                q: "¿Qué es el sesgo de confirmación?",
+                a: "Es la tendencia a buscar, recordar o interpretar información de manera favorable a una creencia previa. Una persona puede recordar los casos en que una petición pareció cumplirse y olvidar aquellos en que no ocurrió nada. El sesgo no implica necesariamente engaño consciente."
+            },
+            {
+                level: 2,
+                num: 10,
+                q: "¿Qué diferencia hay entre coincidencia y causalidad?",
+                a: "Una coincidencia es la ocurrencia conjunta de acontecimientos; una relación causal significa que uno contribuye a producir el otro. Que alguien rece y luego consiga empleo no demuestra que la oración causara el resultado: también pueden intervenir candidaturas, experiencia, contactos y condiciones del mercado."
+            },
+            {
+                level: 2,
+                num: 11,
+                q: "¿Qué es la ilusión de control?",
+                a: "Es sobreestimar nuestra capacidad de influir en un resultado que depende del azar o de factores externos. Puede aparecer en supersticiones, rituales deportivos o creencias religiosas. Tener un ritual puede tranquilizar, pero eso no significa que controle el acontecimiento."
+            },
+            {
+                level: 2,
+                num: 12,
+                q: "¿Cómo puede una creencia religiosa producir efectos positivos sin que exista intervención sobrenatural?",
+                a: "Puede ofrecer apoyo social, reducir la sensación de aislamiento, organizar rutinas, promover esperanza o ayudar a expresar emociones. Esos efectos pueden ser reales y estudiables. No demuestran por sí mismos que una divinidad haya modificado un acontecimiento externo."
+            },
+            {
+                level: 2,
+                num: 13,
+                q: "¿Qué es el coste de oportunidad de esperar una señal?",
+                a: "Es el valor de las alternativas a las que se renuncia mientras se espera. Si alguien aplaza una decisión durante meses, puede perder tiempo, ingresos, formación u oportunidades. La espera puede ser prudente en algunos casos, pero debe compararse con sus consecuencias."
+            },
+            {
+                level: 2,
+                num: 14,
+                q: "¿Por qué atribuir todos los éxitos a Dios puede ser problemático?",
+                a: "Porque puede invisibilizar la preparación, el trabajo de otras personas, los recursos y las circunstancias que contribuyeron al resultado. Una persona puede expresar gratitud religiosa, pero si afirma una causa exclusiva debe justificar por qué descarta otras explicaciones."
+            },
+            {
+                level: 2,
+                num: 15,
+                q: "¿La fe puede causar culpa en quien fracasa?",
+                a: "Sí, en determinadas interpretaciones. Si se enseña que Dios ayuda a quien tiene suficiente fe o se esfuerza correctamente, el fracaso puede vivirse como prueba de insuficiencia moral o espiritual. Esa conclusión no está justificada: hay factores externos y límites que no dependen de la persona."
+            },
+            {
+                level: 2,
+                num: 16,
+                q: "¿Qué diferencia existe entre consuelo y explicación?",
+                a: "El consuelo ayuda a soportar una experiencia; la explicación pretende decir por qué ocurrió. «Esta idea me ayuda a vivir con mi pérdida» es una afirmación sobre la experiencia personal. «La pérdida ocurrió porque Dios quería enseñarme algo» atribuye una intención causal que requiere otro tipo de justificación."
+            },
+            {
+                level: 2,
+                num: 17,
+                q: "¿Por qué no basta con testimonios de peticiones cumplidas?",
+                a: "Porque los testimonios seleccionan casos y no muestran necesariamente cuántas peticiones similares no tuvieron el resultado esperado. Son importantes para conocer experiencias, pero no permiten aislar causas ni calcular probabilidades sin comparación sistemática."
+            },
+            // Nivel 3 — Avanzado (18 a 26)
+            {
+                level: 3,
+                num: 18,
+                q: "¿Qué es la falsabilidad y por qué importa?",
+                a: "Una afirmación es falsable cuando puede describirse alguna observación posible que entre en conflicto con ella. Es importante en la evaluación de hipótesis empíricas porque permite especificar qué resultados contarían en contra. No todas las afirmaciones metafísicas, morales o simbólicas se evalúan como hipótesis científicas."
+            },
+            {
+                level: 3,
+                num: 19,
+                q: "¿Una afirmación religiosa que no puede falsarse es necesariamente falsa?",
+                a: "No. La imposibilidad de someter una afirmación a una prueba empírica no demuestra su falsedad. Pero sí limita qué tipo de conocimiento puede reclamar y qué evidencia puede presentarse a su favor. Es necesario distinguir una convicción metafísica de una afirmación sobre resultados observables."
+            },
+            {
+                level: 3,
+                num: 20,
+                q: "¿Qué plantea el problema del mal?",
+                a: "Plantea una tensión entre la existencia de sufrimiento y la idea de un Dios omnipotente, omnisciente y perfectamente bueno. Si puede evitar el sufrimiento, lo conoce y desea el bien, ¿por qué permite ciertos daños extremos? Existen respuestas teístas, pero cada una enfrenta objeciones filosóficas."
+            },
+            {
+                level: 3,
+                num: 21,
+                q: "¿La defensa del libre albedrío resuelve todo el problema del sufrimiento?",
+                a: "No. Puede explicar parte del mal causado por decisiones humanas, como la violencia o el abuso. Explica con mayor dificultad las catástrofes naturales, las enfermedades congénitas y el sufrimiento animal. Además, queda por discutir por qué una libertad valiosa requeriría permitir daños tan extremos."
+            },
+            {
+                level: 3,
+                num: 22,
+                q: "¿Encontrar sentido después de una tragedia demuestra que la tragedia tenía un propósito?",
+                a: "No. Una persona puede transformar una experiencia dolorosa en solidaridad, aprendizaje o compromiso. Eso describe lo que hizo después. Afirmar que la tragedia fue enviada deliberadamente por una divinidad es una explicación distinta y no queda demostrada por el crecimiento posterior."
+            },
+            {
+                level: 3,
+                num: 23,
+                q: "¿Qué mostró el ensayo STEP sobre la oración intercesora?",
+                a: "El ensayo publicado en 2006 estudió a 1.802 pacientes sometidos a cirugía de bypass coronario. En los grupos que no sabían con certeza si recibirían oración, las complicaciones fueron similares entre quienes recibieron oración intercesora y quienes no. No encontró el beneficio esperado en la recuperación sin complicaciones para ese protocolo y esa población. No resuelve todas las preguntas sobre oración ni sobre Dios."
+            },
+            {
+                level: 3,
+                num: 24,
+                q: "¿Qué significa carga de la prueba?",
+                a: "Significa que quien formula una afirmación debe aportar razones y evidencia adecuadas para sostenerla. Si alguien afirma que una intervención divina causó una curación, debe explicar qué datos apoyan esa causalidad. Quien niega una afirmación también debe justificar su postura cuando formula una conclusión positiva sobre ella."
+            },
+            {
+                level: 3,
+                num: 25,
+                q: "¿En qué se diferencian agnosticismo y ateísmo?",
+                a: "El agnosticismo se refiere principalmente a los límites o la disponibilidad del conocimiento sobre Dios. El ateísmo se refiere a la ausencia de creencia en dioses o, en algunos usos, a la afirmación de que no existen. Una persona puede ser agnóstica y no creer, o ser agnóstica y considerar probable alguna forma de divinidad. El uso de los términos varía y conviene aclararlo."
+            },
+            {
+                level: 3,
+                num: 26,
+                q: "¿Qué evidencia podría hacer que una persona revisara una creencia sobre intervención divina?",
+                a: "Depende de la afirmación concreta. Si sostiene que una oración produce un efecto médico medible, debería especificar el resultado esperado y aceptar estudios bien diseñados que pudieran mostrar ausencia de efecto o resultados contrarios. Si se trata de una convicción metafísica, la revisión puede depender de argumentos filosóficos, coherencia conceptual y evaluación de objeciones. Una creencia que no admite ninguna revisión funciona más como compromiso identitario o existencial que como hipótesis contrastable."
+            },
+            // Nivel 4 — Experto (27 a 33)
+            {
+                level: 4,
+                num: 27,
+                q: "Si la ciencia no puede resolver la existencia de Dios, ¿por qué exigir evidencia?",
+                a: "Porque no todas las afirmaciones religiosas son del mismo tipo. Una afirmación metafísica puede exceder los métodos experimentales, pero una afirmación empírica —por ejemplo, que una oración reduce una tasa concreta de complicaciones— sí puede evaluarse con métodos apropiados. No se debe exigir el método equivocado, pero tampoco usar el límite de un método para blindar cualquier afirmación."
+            },
+            {
+                level: 4,
+                num: 28,
+                q: "¿Puede una explicación que siempre se adapta al resultado seguir teniendo significado?",
+                a: "Sí, puede conservar significado simbólico, espiritual o existencial para quien la sostiene. Sin embargo, si se presenta como explicación causal de cualquier resultado posible, pierde capacidad para discriminar entre lo que confirma y lo que contradice la hipótesis. El significado personal y la fuerza probatoria son dimensiones diferentes."
+            },
+            {
+                level: 4,
+                num: 29,
+                q: "¿La crítica a la dependencia religiosa puede convertirse en una nueva forma de culpabilizar a las víctimas?",
+                a: "Sí. Si se afirma que cada persona puede resolver cualquier problema mediante esfuerzo y autonomía, se ignoran desigualdades, enfermedades, violencia, pobreza y azar. Una crítica responsable cuestiona la pasividad evitable sin negar las limitaciones reales ni responsabilizar a la víctima por lo que no controla."
+            },
+            {
+                level: 4,
+                num: 30,
+                q: "¿Qué respuesta debería darse a alguien que encuentra consuelo en la idea de un plan divino?",
+                a: "No es necesario destruir su consuelo ni fingir que se comparte su explicación. Se puede escuchar, preguntar qué significa para esa persona y ofrecer ayuda concreta. La crítica se vuelve pertinente cuando la creencia se impone a otros, justifica daños o sustituye medidas necesarias. El respeto no exige aceptar como hecho lo que no está demostrado."
+            },
+            {
+                level: 4,
+                num: 31,
+                q: "¿Puede una persona agnóstica vivir con esperanza y sentido?",
+                a: "Sí. La esperanza no pertenece exclusivamente a la religión. Puede basarse en vínculos, proyectos, conocimiento, solidaridad, belleza, curiosidad y posibilidades futuras. Reconocer que no se conoce la respuesta última del universo no impide construir compromisos y encontrar razones para vivir."
+            },
+            {
+                level: 4,
+                num: 32,
+                q: "¿Qué distingue la humildad intelectual de la indecisión permanente?",
+                a: "La humildad intelectual reconoce incertidumbre y mantiene abiertas las conclusiones a revisión. La indecisión permanente puede evitar elegir incluso cuando existe información suficiente para dar un paso razonable. Se puede actuar provisionalmente, evaluar consecuencias y corregir sin fingir certeza absoluta."
+            },
+            {
+                level: 4,
+                num: 33,
+                q: "¿Cuál es la síntesis más equilibrada del tutorial?",
+                a: "No se ha demostrado aquí que Dios exista ni que no exista. Sí puede examinarse la conducta de esperar una intervención divina para resolver problemas concretos. La fe puede acompañar, consolar y crear comunidad; también puede, en ciertas condiciones, favorecer pasividad o explicaciones inmunes a la evidencia. La respuesta adulta es distinguir consuelo de prueba, reconocer límites, pedir ayuda, actuar donde sea posible y no convertir el fracaso en culpa. La esperanza puede caminar junto a la acción, pero no debe reemplazarla."
+            }
+        ];
+
+        let currentTabIndex = 0;
+        const tabPanes = document.querySelectorAll('.tab-pane');
+        const totalTabs = tabPanes.length;
+
+        // 2. Inicializar Barra Superior de Pestañas y Menú Sándwich (Drawer)
+        function initNavigation() {
+            const topBar = document.getElementById('top-tabs-bar');
+            const drawerContainer = document.getElementById('drawer-links-container');
+            topBar.innerHTML = '';
+            drawerContainer.innerHTML = '';
+
+            tabPanes.forEach((pane, idx) => {
+                const title = pane.getAttribute('data-tab-title');
+
+                // Botón en la barra superior fija horizontal
+                const tabBtn = document.createElement('button');
+                tabBtn.type = 'button';
+                tabBtn.id = `top-tab-btn-${idx}`;
+                tabBtn.className = `tab-btn flex-shrink-0 px-3.5 py-1.5 rounded-xl text-xs sm:text-sm font-display border border-slate-800 bg-slate-900/70 text-slate-300 hover:text-white whitespace-nowrap ${idx === 0 ? 'active' : ''}`;
+                tabBtn.textContent = title;
+                tabBtn.onclick = () => selectTab(idx);
+                topBar.appendChild(tabBtn);
+
+                // Elemento en el Menú Sándwich (lista vertical completa)
+                const drawerBtn = document.createElement('button');
+                drawerBtn.type = 'button';
+                drawerBtn.id = `drawer-tab-btn-${idx}`;
+                drawerBtn.className = `w-full text-left p-3 rounded-xl flex items-center gap-3 transition border ${idx === 0 ? 'bg-cyan-500/20 border-cyan-400 text-white font-bold' : 'bg-slate-900/50 border-slate-800/80 text-slate-300 hover:bg-slate-800'}`;
+                drawerBtn.innerHTML = `
+                    <span class="w-7 h-7 rounded-lg bg-slate-950 border border-cyan-500/30 text-cyan-300 font-mono text-xs flex items-center justify-center flex-shrink-0">
+                        ${String(idx + 1).padStart(2, '0')}
+                    </span>
+                    <span class="text-sm truncate">${title}</span>
+                `;
+                drawerBtn.onclick = () => {
+                    selectTab(idx);
+                    toggleDrawer(false);
+                };
+                drawerContainer.appendChild(drawerBtn);
+            });
+
+            updateBottomNavigation();
+        }
+
+        // 3. Cambiar de Pestaña con Auto-Centrado en la Barra Horizontal y Subida al Comienzo
+        function selectTab(index) {
+            if (index < 0 || index >= totalTabs) return;
+            currentTabIndex = index;
+
+            // Activar panel de contenido
+            tabPanes.forEach((pane, idx) => {
+                if (idx === index) {
+                    pane.classList.add('active');
+                } else {
+                    pane.classList.remove('active');
+                }
+            });
+
+            // Actualizar estado activo y auto-centrar pestaña en la barra horizontal
+            tabPanes.forEach((_, idx) => {
+                const topBtn = document.getElementById(`top-tab-btn-${idx}`);
+                const drawerBtn = document.getElementById(`drawer-tab-btn-${idx}`);
+
+                if (idx === index) {
+                    topBtn.classList.add('active');
+                    drawerBtn.className = 'w-full text-left p-3 rounded-xl flex items-center gap-3 transition border bg-cyan-500/20 border-cyan-400 text-white font-bold';
+                    
+                    // Auto-centrado horizontal suave en la barra de pestañas
+                    const topBar = document.getElementById('top-tabs-bar');
+                    const scrollTarget = topBtn.offsetLeft - (topBar.clientWidth / 2) + (topBtn.clientWidth / 2);
+                    topBar.scrollTo({ left: Math.max(0, scrollTarget), behavior: 'smooth' });
+                } else {
+                    topBtn.classList.remove('active');
+                    drawerBtn.className = 'w-full text-left p-3 rounded-xl flex items-center gap-3 transition border bg-slate-900/50 border-slate-800/80 text-slate-300 hover:bg-slate-800';
+                }
+            });
+
+            // Actualizar insignia de progreso
+            const badge = document.getElementById('tab-counterBadge');
+            if (badge) badge.textContent = `${index + 1} / ${totalTabs}`;
+
+            // Actualizar botones fijos al final de la pestaña (Anterior / Próxima)
+            updateBottomNavigation();
+
+            // Llevar al comienzo de la pestaña actual
+            scrollToCurrentTabTop();
+        }
+
+        function navigateRelative(delta) {
+            const target = currentTabIndex + delta;
+            if (target >= 0 && target < totalTabs) {
+                selectTab(target);
+            }
+        }
+
+        function updateBottomNavigation() {
+            const prevBtn = document.getElementById('prev-tab-btn');
+            const nextBtn = document.getElementById('next-tab-btn');
+            const prevLabel = document.getElementById('prev-tab-label');
+            const nextLabel = document.getElementById('next-tab-label');
+
+            if (currentTabIndex === 0) {
+                prevBtn.classList.add('hidden');
+            } else {
+                prevBtn.classList.remove('hidden');
+                prevLabel.textContent = tabPanes[currentTabIndex - 1].getAttribute('data-tab-title');
+            }
+
+            if (currentTabIndex === totalTabs - 1) {
+                nextBtn.classList.add('hidden');
+            } else {
+                nextBtn.classList.remove('hidden');
+                nextLabel.textContent = tabPanes[currentTabIndex + 1].getAttribute('data-tab-title');
+            }
+        }
+
+        // 4. Función para llevar siempre al comienzo de la pestaña actual
+        function scrollToCurrentTabTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // 5. Control del Menú Sándwich (Drawer Vertical)
+        function toggleDrawer(open) {
+            const overlay = document.getElementById('drawer-overlay');
+            const drawer = document.getElementById('drawer-menu');
+            if (open) {
+                overlay.classList.remove('hidden');
+                setTimeout(() => {
+                    overlay.classList.remove('opacity-0');
+                    drawer.classList.remove('translate-x-full');
+                }, 10);
+            } else {
+                overlay.classList.add('opacity-0');
+                drawer.classList.add('translate-x-full');
+                setTimeout(() => {
+                    overlay.classList.add('hidden');
+                }, 300);
+            }
+        }
+
+        // 6. Renderizar las 33 Preguntas y Respuestas (Default: Plegadas "- Plegar todas las respuestas")
+        function renderQA() {
+            qaData.forEach(item => {
+                const container = document.getElementById(`qa-level-${item.level}`);
+                if (!container) return;
+
+                const card = document.createElement('div');
+                card.className = 'rounded-2xl bg-slate-900/85 border border-slate-800 overflow-hidden transition';
+                card.innerHTML = `
+                    <button type="button" onclick="toggleSingleQA(${item.num})"
+                            class="w-full text-left p-4 flex items-start justify-between gap-3 hover:bg-slate-800/60 transition">
+                        <div class="flex items-start gap-3">
+                            <span class="w-7 h-7 rounded-lg bg-cyan-500/15 border border-cyan-500/30 text-cyan-300 font-display font-bold text-xs flex items-center justify-center flex-shrink-0 mt-0.5">
+                                ${item.num}
+                            </span>
+                            <h3 class="font-display font-bold text-sm sm:text-base text-white leading-snug">${item.q}</h3>
+                        </div>
+                        <span id="qa-icon-${item.num}" class="text-cyan-400 font-mono font-bold text-lg leading-none flex-shrink-0 mt-0.5">+</span>
+                    </button>
+                    <div id="qa-answer-${item.num}" class="qa-answer-block hidden px-4 pb-4 pt-1 pl-14 text-sm sm:text-base text-slate-300 leading-relaxed border-t border-slate-800/60 bg-slate-950/50">
+                        ${item.a}
+                    </div>
+                `;
+                container.appendChild(card);
+            });
+            // Asegurar estado por defecto: "- Plegar todas las respuestas"
+            toggleAllQA(false);
+        }
+
+        function toggleSingleQA(num) {
+            const ans = document.getElementById(`qa-answer-${num}`);
+            const icon = document.getElementById(`qa-icon-${num}`);
+            if (!ans) return;
+            const isHidden = ans.classList.contains('hidden');
+            if (isHidden) {
+                ans.classList.remove('hidden');
+                icon.textContent = '−';
+            } else {
+                ans.classList.add('hidden');
+                icon.textContent = '+';
+            }
+        }
+
+        function toggleAllQA(expand) {
+            const answers = document.querySelectorAll('.qa-answer-block');
+            const btnExpand = document.getElementById('btn-expand-all');
+            const btnCollapse = document.getElementById('btn-collapse-all');
+            const statusText = document.getElementById('qa-status-text');
+            const statusDot = document.getElementById('qa-status-indicator');
+
+            answers.forEach((ans) => {
+                const num = ans.id.replace('qa-answer-', '');
+                const icon = document.getElementById(`qa-icon-${num}`);
+                if (expand) {
+                    ans.classList.remove('hidden');
+                    if (icon) icon.textContent = '−';
+                } else {
+                    ans.classList.add('hidden');
+                    if (icon) icon.textContent = '+';
+                }
+            });
+
+            if (expand) {
+                btnExpand.className = 'flex-1 sm:flex-initial px-3.5 py-2.5 rounded-xl text-xs sm:text-sm font-display font-bold border transition bg-gradient-to-r from-cyan-500 to-blue-600 text-slate-950 border-cyan-300 shadow-lg shadow-cyan-500/20 active:scale-95';
+                btnCollapse.className = 'flex-1 sm:flex-initial px-3.5 py-2.5 rounded-xl text-xs sm:text-sm font-display font-bold border transition bg-slate-900 text-cyan-300 border-cyan-500/40 hover:bg-cyan-500/20 active:scale-95';
+                statusText.textContent = 'Estado actual: Todas las respuestas desplegadas';
+                statusDot.className = 'w-2.5 h-2.5 rounded-full bg-cyan-400 animate-pulse';
+            } else {
+                btnCollapse.className = 'flex-1 sm:flex-initial px-3.5 py-2.5 rounded-xl text-xs sm:text-sm font-display font-bold border transition bg-gradient-to-r from-cyan-500 to-blue-600 text-slate-950 border-cyan-300 shadow-lg shadow-cyan-500/20 active:scale-95';
+                btnExpand.className = 'flex-1 sm:flex-initial px-3.5 py-2.5 rounded-xl text-xs sm:text-sm font-display font-bold border transition bg-slate-900 text-cyan-300 border-cyan-500/40 hover:bg-cyan-500/20 active:scale-95';
+                statusText.textContent = 'Estado actual: Respuestas plegadas';
+                statusDot.className = 'w-2.5 h-2.5 rounded-full bg-purple-400 animate-pulse';
+            }
+        }
+
+        // 7. Filtro de Glosario en tiempo real
+        function filterGlossary(query) {
+            const normalized = query.toLowerCase().trim();
+            const items = document.querySelectorAll('.glossary-item');
+            items.forEach(item => {
+                const text = item.textContent.toLowerCase();
+                item.style.display = text.includes(normalized) ? 'block' : 'none';
+            });
+        }
+
+        // 8. Hacer los Botones Flotantes Movibles (Touch & Mouse Drag + Tap Action)
+        function makeDraggableFAB(element, onClickAction) {
+            let isDragging = false;
+            let hasMoved = false;
+            let startX = 0, startY = 0;
+            let initialLeft = 0, initialTop = 0;
+
+            function onPointerDown(e) {
+                isDragging = true;
+                hasMoved = false;
+                const rect = element.getBoundingClientRect();
+                initialLeft = rect.left;
+                initialTop = rect.top;
+
+                const clientX = e.touches ? e.touches[0].clientX : e.clientX;
+                const clientY = e.touches ? e.touches[0].clientY : e.clientY;
+                startX = clientX;
+                startY = clientY;
+
+                element.style.bottom = 'auto';
+                element.style.right = 'auto';
+                element.style.left = `${initialLeft}px`;
+                element.style.top = `${initialTop}px`;
+            }
+
+            function onPointerMove(e) {
+                if (!isDragging) return;
+                const clientX = e.touches ? e.touches[0].clientX : e.clientX;
+                const clientY = e.touches ? e.touches[0].clientY : e.clientY;
+
+                const dx = clientX - startX;
+                const dy = clientY - startY;
+
+                if (Math.abs(dx) > 6 || Math.abs(dy) > 6) {
+                    hasMoved = true;
+                }
+
+                if (hasMoved) {
+                    if (e.cancelable) e.preventDefault();
+                    const maxX = window.innerWidth - element.offsetWidth - 6;
+                    const maxY = window.innerHeight - element.offsetHeight - 6;
+                    const newLeft = Math.max(6, Math.min(maxX, initialLeft + dx));
+                    const newTop = Math.max(6, Math.min(maxY, initialTop + dy));
+
+                    element.style.left = `${newLeft}px`;
+                    element.style.top = `${newTop}px`;
+                }
+            }
+
+            function onPointerUp() {
+                if (!isDragging) return;
+                isDragging = false;
+                if (!hasMoved) {
+                    onClickAction();
+                }
+            }
+
+            element.addEventListener('touchstart', onPointerDown, { passive: true });
+            window.addEventListener('touchmove', onPointerMove, { passive: false });
+            window.addEventListener('touchend', onPointerUp);
+
+            element.addEventListener('mousedown', onPointerDown);
+            window.addEventListener('mousemove', onPointerMove);
+            window.addEventListener('mouseup', onPointerUp);
+        }
+
+        // Inicialización al cargar el documento
+        window.addEventListener('DOMContentLoaded', () => {
+            initNavigation();
+            renderQA();
+
+            // Configurar botón flotante movible INICIO
+            makeDraggableFAB(document.getElementById('fab-inicio'), () => {
+                selectTab(0);
+            });
+
+            // Configurar botón flotante movible ARRIBA (Comienzo de la pestaña actual)
+            makeDraggableFAB(document.getElementById('fab-arriba'), () => {
+                scrollToCurrentTabTop();
+            });
+        });
+    </script>
+</body>
+</html>
